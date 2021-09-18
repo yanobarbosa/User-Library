@@ -1,0 +1,43 @@
+{
+	"version": 2,
+	"page_refs": {
+		"P": {
+			"path": "E:\\RPG\\Gurps\\Books\\GURPS 4e - Powers.pdf"
+		},
+		"B": {
+			"path": "E:\\RPG\\Gurps\\Books\\Core\\GURPS 4e - Core - Basic Set - Characters.pdf",
+			"offset": 2
+		},
+		"DF1:": {
+			"path": "E:\\RPG\\Gurps\\Books\\Dungeon Fantasy\\GURPS 4e - Dungeon Fantasy 01 - Adventurers.pdf"
+		},
+		"MA": {
+			"path": "E:\\RPG\\Gurps\\Books\\Tech\\GURPS 4e - High-Tech.pdf"
+		},
+		"DF3:": {
+			"path": "E:\\RPG\\Gurps\\Books\\Dungeon Fantasy\\GURPS 4e - Dungeon Fantasy 03 - The Next Level.pdf"
+		},
+		"LT": {
+			"path": "E:\\RPG\\Gurps\\Books\\Tech\\GURPS 4e - Low-Tech.pdf",
+			"offset": 2
+		},
+		"DF8:": {
+			"path": "E:\\RPG\\Gurps\\Books\\Dungeon Fantasy\\GURPS 4e - Dungeon Fantasy 08 - Treasure Tables.pdf"
+		},
+		"HT": {
+			"path": "E:\\RPG\\Gurps\\Books\\Tech\\GURPS 4e - High-Tech.pdf",
+			"offset": 1
+		},
+		"M": {
+			"path": "E:\\RPG\\Gurps\\Books\\Magic\\GURPS - 4th Edition - Magic.pdf",
+			"offset": 1
+		},
+		"MDS": {
+			"path": "E:\\RPG\\Gurps\\Books\\Magic\\GURPS 4e - Magic - Death Spells (v1.1).pdf"
+		},
+		"DR": {
+			"path": "E:\\RPG\\Gurps\\Books\\GURPS - Dragons (4th Ed).pdf",
+			"offset": 2
+		}
+	}
+}
