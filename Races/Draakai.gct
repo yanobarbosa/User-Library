@@ -9,10 +9,53 @@
 			"container_type": "race",
 			"name": "Draakai",
 			"calc": {
-				"points": 30
+				"points": 35
 			},
 			"open": true,
 			"children": [
+				{
+					"type": "advantage",
+					"id": "7fee93cf-043e-463d-a30a-a36d3d524f09",
+					"name": "Crushing Striker (Tail)",
+					"physical": true,
+					"exotic": true,
+					"base_points": 5,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "cr",
+								"st": "thr",
+								"modifier_per_die": 1
+							},
+							"reach": "C",
+							"parry": "0",
+							"block": "No",
+							"calc": {
+								"level": 0,
+								"parry": "0",
+								"block": "No",
+								"damage": "thr (+1 per die) cr"
+							},
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								}
+							]
+						}
+					],
+					"reference": "B88",
+					"calc": {
+						"points": 5
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
 				{
 					"type": "advantage",
 					"id": "13f3bbf0-a0fb-47b5-8c43-ab6f776c929a",

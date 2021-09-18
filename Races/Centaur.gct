@@ -130,8 +130,8 @@
 				},
 				{
 					"type": "advantage",
-					"id": "afb13c0a-d03e-462e-bd59-f8d55b3ab0f7",
-					"name": "Claws, Hooves",
+					"id": "80e138f1-40db-4874-8568-2e7b00c62c28",
+					"name": "Hooves",
 					"physical": true,
 					"base_points": 3,
 					"weapons": [
@@ -181,7 +181,6 @@
 							"location": "foot"
 						}
 					],
-					"notes": "Only pay for hands or feet, not both",
 					"categories": [
 						"Advantage"
 					]
@@ -212,15 +211,89 @@
 				},
 				{
 					"type": "advantage",
-					"id": "9179d0b0-b29d-41dc-8812-f93efcc60305",
-					"name": "Extra Legs (4 legs)",
+					"id": "15edeff4-faaa-4279-b7e1-e477baac5076",
+					"name": "Extra Legs",
 					"physical": true,
 					"exotic": true,
-					"base_points": 5,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "97ce3032-b68d-4989-81dd-8f0353596d42",
+							"name": "4",
+							"reference": "B54",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "12eda8e3-f92b-4bec-b09f-a48c9b8aed15",
+							"disabled": true,
+							"name": "@5 or 6@",
+							"reference": "B55",
+							"cost_type": "points",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "33a7b27c-37c0-47d5-9310-dc67c5f0f589",
+							"disabled": true,
+							"name": "@7+@",
+							"reference": "B55",
+							"cost_type": "points",
+							"cost": 15,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "f6310071-963c-4423-b6dd-27c3e47ff9dd",
+							"disabled": true,
+							"name": "Long",
+							"reference": "B55",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"levels": 1
+						},
+						{
+							"type": "modifier",
+							"id": "f931cd29-b67d-45ce-8229-605c9ec917ec",
+							"disabled": true,
+							"name": "Cannot Kick",
+							"reference": "B55",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "05da7aad-ad18-4165-9520-c1f4d1e94c8b",
+							"disabled": true,
+							"name": "Extra Flexible",
+							"reference": "MATG27",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "6e3b4ad2-4c7a-48f3-8a40-39a619d66e80",
+							"disabled": true,
+							"name": "Prehensile Feet",
+							"reference": "MATG28",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						}
+					],
 					"reference": "B54",
 					"calc": {
 						"points": 5
-					}
+					},
+					"categories": [
+						"Advantage"
+					]
 				},
 				{
 					"type": "advantage",
