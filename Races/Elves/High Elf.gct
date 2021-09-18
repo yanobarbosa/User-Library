@@ -1,0 +1,733 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "471d5ed2-ac6a-42d3-95ce-36b63b133845",
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "32223b0f-0d18-44af-b5b5-7d14254e1e03",
+			"container_type": "race",
+			"name": "High Elf",
+			"calc": {
+				"points": 49
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage_container",
+					"id": "b0c64198-7818-4675-8373-3dccf4ead3a6",
+					"name": "Elf",
+					"calc": {
+						"points": 14
+					},
+					"open": true,
+					"children": [
+						{
+							"type": "advantage",
+							"id": "f136031c-0e0b-4e06-a973-5c3994ca30f4",
+							"name": "Appearance",
+							"physical": true,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "e9fa9276-19a9-4111-b982-c8e4ee956270",
+									"disabled": true,
+									"name": "Universal",
+									"cost_type": "percentage",
+									"cost": 25,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "f7f4c98b-ae2a-402a-8617-a3ca8f9d486b",
+									"disabled": true,
+									"name": "Off-the-Shelf Looks",
+									"cost_type": "percentage",
+									"cost": -50,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "bcffaba5-3c95-48b4-9bdc-fd58fa4694e3",
+									"disabled": true,
+									"name": "Androgynous",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "111e5e4d-f05f-4b8c-8e31-4fdd0ec36f3d",
+									"disabled": true,
+									"name": "Impressive",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "423af6b8-9894-438c-894b-4170271bcaec",
+									"name": "Attractive",
+									"cost_type": "points",
+									"cost": 4,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "bd52f314-cb2b-4c4a-8c84-db17ee743b61",
+									"disabled": true,
+									"name": "Average",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "cfab1940-f365-4b8a-bee6-ea1249e8dc85",
+									"disabled": true,
+									"name": "Horrific",
+									"cost_type": "points",
+									"cost": -24,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "c99f6341-9ca5-4320-969a-98f568f00782",
+									"disabled": true,
+									"name": "Monstrous",
+									"cost_type": "points",
+									"cost": -20,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "2de1f2ca-f4bc-4264-9424-b6cf07829f88",
+									"disabled": true,
+									"name": "Hideous",
+									"cost_type": "points",
+									"cost": -16,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "5e78d974-dc3e-40f3-9311-890075f2e85c",
+									"disabled": true,
+									"name": "Ugly",
+									"cost_type": "points",
+									"cost": -8,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "e948d782-580e-4c46-8b0a-86b998ba5923",
+									"disabled": true,
+									"name": "Unattractive",
+									"cost_type": "points",
+									"cost": -4,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "98953150-0988-4a46-bc00-da323a688584",
+									"disabled": true,
+									"name": "Handsome",
+									"cost_type": "points",
+									"cost": 12,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "7b7dfae5-bd25-4bbe-866e-f6fc56c46872",
+									"disabled": true,
+									"name": "Beautiful",
+									"cost_type": "points",
+									"cost": 12,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "aa04a27c-430f-4aad-968c-2d9d5efff38c",
+									"disabled": true,
+									"name": "Very Handsome",
+									"cost_type": "points",
+									"cost": 16,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "04d282c4-5a15-47d4-b376-0493886675d9",
+									"disabled": true,
+									"name": "Very Beautiful",
+									"cost_type": "points",
+									"cost": 16,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "12505570-9525-4d8b-8a72-1f083a7c19ce",
+									"disabled": true,
+									"name": "Transcendent",
+									"cost_type": "points",
+									"cost": 20,
+									"affects": "total"
+								}
+							],
+							"reference": "B21",
+							"calc": {
+								"points": 4
+							},
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "a1fb4f0f-16c3-4664-9d95-fab931590099",
+							"name": "Decreased Strength",
+							"physical": true,
+							"levels": "1",
+							"points_per_level": -10,
+							"reference": "B14",
+							"calc": {
+								"points": -10
+							},
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": -1,
+									"per_level": true,
+									"attribute": "st"
+								}
+							],
+							"categories": [
+								"Attribute",
+								"Disadvantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "691bfc3b-7b01-4e0e-b163-5b3f82b21ecd",
+							"name": "Elven Gear",
+							"physical": true,
+							"base_points": 1,
+							"reference": "DF3:6",
+							"calc": {
+								"points": 1
+							},
+							"notes": "10% off the final price of gear qualified as “elven” – armor, rations, weapons, etc"
+						},
+						{
+							"type": "advantage",
+							"id": "c7e34577-5cd4-4477-832c-5c3b14804a50",
+							"name": "Extended Lifespan",
+							"physical": true,
+							"exotic": true,
+							"levels": "3",
+							"points_per_level": 2,
+							"reference": "B53",
+							"calc": {
+								"points": 6
+							},
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "3700d2d2-4f24-4e83-9db1-644f7154de46",
+							"name": "Extra Hit Points",
+							"physical": true,
+							"levels": "1",
+							"points_per_level": 2,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "cff8b0d8-677a-4f04-a0d3-fd9bfb5dae8b",
+									"disabled": true,
+									"name": "Size",
+									"cost_type": "percentage",
+									"cost": -10,
+									"affects": "total",
+									"levels": 1
+								},
+								{
+									"type": "modifier",
+									"id": "238feae7-cbad-4411-9602-111fb9f5f562",
+									"disabled": true,
+									"name": "No Fine Manipulators",
+									"cost_type": "percentage",
+									"cost": -40,
+									"affects": "total"
+								}
+							],
+							"reference": "B16",
+							"calc": {
+								"points": 2
+							},
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": 1,
+									"per_level": true,
+									"attribute": "hp"
+								}
+							],
+							"categories": [
+								"Advantage",
+								"Attribute"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "911e0a38-9a23-482a-ae6a-224da25a5a58",
+							"name": "Feature: Beardless",
+							"physical": true,
+							"calc": {
+								"points": 0
+							},
+							"notes": "Elves cann't grow beards by natural means"
+						},
+						{
+							"type": "advantage",
+							"id": "a4a30681-8697-4934-815f-7922b15bd1cb",
+							"name": "Feature: Pointy ears",
+							"physical": true,
+							"calc": {
+								"points": 0
+							}
+						},
+						{
+							"type": "advantage",
+							"id": "9da70dff-d738-4bcc-9dd7-c49159d61b48",
+							"name": "Language: ",
+							"mental": true,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "9f3ec41c-c30f-4e65-8e9f-199793f46f1c",
+									"disabled": true,
+									"name": "Native",
+									"reference": "B23",
+									"cost_type": "points",
+									"cost": -6,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "ee552130-1708-462a-a256-76469906fb12",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total",
+									"notes": "None"
+								},
+								{
+									"type": "modifier",
+									"id": "f5ce468a-27c8-4ae3-8762-253c5709f03a",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Broken"
+								},
+								{
+									"type": "modifier",
+									"id": "fd92c00a-4dc5-44bd-a4f5-22b5965ab702",
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "a67e7236-e7e9-48c8-b36d-53bcd8ab0fe1",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 3,
+									"affects": "total",
+									"notes": "Native"
+								},
+								{
+									"type": "modifier",
+									"id": "3c066ba5-b4b7-49c2-9668-5df3c31b6c14",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total",
+									"notes": "None"
+								},
+								{
+									"type": "modifier",
+									"id": "18640e86-38cc-43f0-8939-81ae58992f3d",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Broken"
+								},
+								{
+									"type": "modifier",
+									"id": "b90234f7-cab7-4c42-9e47-e19e9d24547d",
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "ca2efe73-2fa3-4f3b-a568-83b41953c331",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 3,
+									"affects": "total",
+									"notes": "Native"
+								}
+							],
+							"reference": "B24",
+							"calc": {
+								"points": 4
+							},
+							"categories": [
+								"Advantage",
+								"Language"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "d94fb507-9830-47c7-886c-0ae887a78dec",
+							"name": "Language: Elvish",
+							"mental": true,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "e10b83f6-03e9-46a8-8fcc-9641ba6ad814",
+									"name": "Native",
+									"reference": "B23",
+									"cost_type": "points",
+									"cost": -6,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "bf99895e-cd3b-4738-a5e6-9919b0739d5d",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total",
+									"notes": "None"
+								},
+								{
+									"type": "modifier",
+									"id": "9ba88326-e98d-4a25-9681-b010a5412e92",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Broken"
+								},
+								{
+									"type": "modifier",
+									"id": "41049d31-aaae-41de-aa8d-904a6d4442d3",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "db807bd6-3c00-4c19-855f-c03daf6a936e",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 3,
+									"affects": "total",
+									"notes": "Native"
+								},
+								{
+									"type": "modifier",
+									"id": "16d2aad7-a730-43ab-826d-5bca2516d708",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total",
+									"notes": "None"
+								},
+								{
+									"type": "modifier",
+									"id": "4b807760-804e-4441-8b9d-2eea09c69c75",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Broken"
+								},
+								{
+									"type": "modifier",
+									"id": "9f0933cb-7406-4683-b081-8ec5df3dc2c6",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "8abe6b8a-8c9f-46b1-a2d1-866bd90f55c3",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 3,
+									"affects": "total",
+									"notes": "Native"
+								}
+							],
+							"reference": "B24",
+							"calc": {
+								"points": -6
+							},
+							"categories": [
+								"Advantage",
+								"Language"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "e12bef1e-4a34-4a55-aa78-59a56f53103c",
+							"name": "Less Sleep",
+							"physical": true,
+							"levels": "4",
+							"points_per_level": 2,
+							"reference": "B65",
+							"calc": {
+								"points": 8
+							},
+							"notes": "Require 1 hour/level less sleep for a full night's rest (max 4)",
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "79b5a6bc-fba2-4e21-bbf2-2cf02c1cfe5f",
+							"name": "Night Vision",
+							"physical": true,
+							"levels": "5",
+							"points_per_level": 1,
+							"reference": "B71",
+							"calc": {
+								"points": 5
+							},
+							"categories": [
+								"Advantage"
+							]
+						}
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "aa072cb0-a2c2-430e-9463-8fe23f42cffb",
+					"name": "Feature: Gold or Silver hair",
+					"physical": true,
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "00019956-e229-47ec-8761-807756b7869a",
+					"name": "Increased Intelligence",
+					"mental": true,
+					"levels": "1",
+					"points_per_level": 20,
+					"reference": "B15",
+					"calc": {
+						"points": 20
+					},
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"per_level": true,
+							"attribute": "iq"
+						}
+					],
+					"categories": [
+						"Advantage",
+						"Attribute"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "527d9986-ecac-4538-bcb2-f9e8c6a3896e",
+					"name": "Magery",
+					"mental": true,
+					"supernatural": true,
+					"levels": "1",
+					"base_points": 5,
+					"points_per_level": 10,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "25802017-66dc-4a6a-a5b7-4659dfc57b06",
+							"disabled": true,
+							"name": "Dance",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"id": "a416b2a3-0f7c-4570-90a8-ae72461b5405",
+							"disabled": true,
+							"name": "Dark-Aspected",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"id": "8f173068-1b23-418d-8c77-f588f43fc45c",
+							"disabled": true,
+							"name": "Day-Aspected",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"id": "d698f1e3-14c8-4542-b217-d4a1c5b021d2",
+							"disabled": true,
+							"name": "Musical",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"id": "601c2d84-90db-4e2e-bb4d-bb5fda3bdd18",
+							"disabled": true,
+							"name": "Night-Aspected",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"id": "0a20df52-65bd-4bcf-bcdc-84ea6c95d612",
+							"disabled": true,
+							"name": "One College",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only",
+							"notes": "@College@"
+						},
+						{
+							"type": "modifier",
+							"id": "f20ca166-2c13-47f4-8d5b-0987b1bd0f67",
+							"disabled": true,
+							"name": "Solitary",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						},
+						{
+							"type": "modifier",
+							"id": "4a908df7-7203-4252-8e8a-f16541d9c285",
+							"disabled": true,
+							"name": "Song",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "levels_only"
+						}
+					],
+					"reference": "B66",
+					"calc": {
+						"points": 15
+					},
+					"features": [
+						{
+							"type": "spell_bonus",
+							"amount": 1,
+							"per_level": true,
+							"match": "all_colleges"
+						},
+						{
+							"type": "skill_bonus",
+							"amount": 1,
+							"per_level": true,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "thaumatology"
+							}
+						},
+						{
+							"type": "spell_bonus",
+							"amount": -1,
+							"per_level": true,
+							"match": "college_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Clerical"
+							}
+						},
+						{
+							"type": "spell_bonus",
+							"amount": -1,
+							"per_level": true,
+							"match": "college_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Druid"
+							}
+						},
+						{
+							"type": "spell_bonus",
+							"amount": -1,
+							"per_level": true,
+							"match": "college_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Unholy"
+							}
+						}
+					],
+					"categories": [
+						"Advantage"
+					]
+				}
+			]
+		}
+	]
+}

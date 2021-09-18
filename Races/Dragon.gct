@@ -1,0 +1,1575 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "bc8e2116-3336-49c6-a979-c86947f29fa6",
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "0abdbb74-cd7f-4834-a422-a91ed6dbd901",
+			"container_type": "race",
+			"name": "Dragon",
+			"calc": {
+				"points": 139
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage_container",
+					"id": "8246b7f8-7fd7-4158-a6e6-15896d45b7f8",
+					"name": "Advantages",
+					"calc": {
+						"points": 196
+					},
+					"open": true,
+					"children": [
+						{
+							"type": "advantage",
+							"id": "3ffce88c-8442-4e8d-aaac-5abb18aa65a2",
+							"name": "Wealthy",
+							"social": true,
+							"base_points": 20,
+							"reference": "B25",
+							"calc": {
+								"points": 20
+							},
+							"notes": "Starting wealth is 5x normal",
+							"categories": [
+								"Advantage",
+								"Wealth"
+							]
+						},
+						{
+							"type": "advantage_container",
+							"id": "b54c15bd-5ed8-4340-a642-b6fad1823552",
+							"name": "Attribute Modifiers",
+							"calc": {
+								"points": 60
+							},
+							"open": true,
+							"children": [
+								{
+									"type": "advantage",
+									"id": "1ea1f6b8-bed3-4244-a80d-0989ba8bf4c9",
+									"name": "Increased Consumption",
+									"physical": true,
+									"modifiers": [
+										{
+											"type": "modifier",
+											"id": "b0a9bd93-a897-466a-b3e0-5925f3c9a328",
+											"name": "Consumption x2",
+											"reference": "B139",
+											"cost_type": "points",
+											"cost": -10,
+											"affects": "total"
+										},
+										{
+											"type": "modifier",
+											"id": "0b0d5d5c-4adc-4c47-892e-6b1d3869775b",
+											"disabled": true,
+											"name": "Consumption x4",
+											"reference": "B139",
+											"cost_type": "points",
+											"cost": -20,
+											"affects": "total"
+										},
+										{
+											"type": "modifier",
+											"id": "ece19382-a772-4279-97c0-27d64a844e6c",
+											"disabled": true,
+											"name": "Consumption x8",
+											"reference": "B139",
+											"cost_type": "points",
+											"cost": -30,
+											"affects": "total"
+										}
+									],
+									"reference": "B139",
+									"calc": {
+										"points": -10
+									},
+									"categories": [
+										"Disadvantage"
+									]
+								},
+								{
+									"type": "advantage",
+									"id": "2ad71e6b-486a-4169-8ed9-2e3c250d58aa",
+									"name": "Increased Perception",
+									"physical": true,
+									"levels": "3",
+									"points_per_level": 5,
+									"reference": "B15",
+									"calc": {
+										"points": 15
+									},
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"amount": 1,
+											"per_level": true,
+											"attribute": "iq"
+										}
+									]
+								},
+								{
+									"type": "advantage",
+									"id": "1b418e38-cd19-4e92-a36b-2b2dd9715d53",
+									"name": "Increased Size",
+									"physical": true,
+									"levels": "2",
+									"calc": {
+										"points": 0
+									},
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"amount": 1,
+											"per_level": true,
+											"attribute": "sm"
+										}
+									]
+								},
+								{
+									"type": "advantage",
+									"id": "97f7337f-6531-49f4-ad5c-25fea65f0d5d",
+									"name": "Increased Strength",
+									"physical": true,
+									"levels": "5",
+									"points_per_level": 10,
+									"modifiers": [
+										{
+											"type": "modifier",
+											"id": "95de52dd-aac0-4537-b623-2738ef32b4b4",
+											"disabled": true,
+											"name": "No Fine Manipulators",
+											"reference": "B15",
+											"cost_type": "percentage",
+											"cost": -40,
+											"affects": "total"
+										},
+										{
+											"type": "modifier",
+											"id": "7cff1173-7d68-4a3c-99e4-d517b599fcc5",
+											"name": "Size",
+											"reference": "B15",
+											"cost_type": "percentage",
+											"cost": -10,
+											"affects": "total",
+											"levels": 2
+										},
+										{
+											"type": "modifier",
+											"id": "89e3a58f-c268-4984-8325-523b3d1c3e90",
+											"disabled": true,
+											"name": "Super-Effort",
+											"reference": "SU24",
+											"cost_type": "percentage",
+											"cost": 300,
+											"affects": "total"
+										}
+									],
+									"reference": "B14",
+									"calc": {
+										"points": 40
+									},
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"amount": 1,
+											"per_level": true,
+											"attribute": "st"
+										}
+									],
+									"categories": [
+										"Advantage",
+										"Attribute"
+									]
+								},
+								{
+									"type": "advantage",
+									"id": "c961b8b3-5482-4964-9f36-38fab7a125d8",
+									"name": "Increased Will",
+									"mental": true,
+									"levels": "3",
+									"points_per_level": 5,
+									"reference": "B16",
+									"calc": {
+										"points": 15
+									},
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"amount": 1,
+											"per_level": true,
+											"attribute": "will"
+										}
+									],
+									"categories": [
+										"Advantage",
+										"Attribute"
+									]
+								}
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "31c17de3-264a-4e37-ab8f-939dd8ee8bba",
+							"name": "Crushing Striker (Tail)",
+							"physical": true,
+							"exotic": true,
+							"base_points": 5,
+							"weapons": [
+								{
+									"type": "melee_weapon",
+									"damage": {
+										"type": "cr",
+										"st": "thr",
+										"modifier_per_die": 1
+									},
+									"reach": "C",
+									"parry": "0",
+									"block": "No",
+									"calc": {
+										"level": 0,
+										"parry": "0",
+										"block": "No",
+										"damage": "thr (+1 per die) cr"
+									},
+									"defaults": [
+										{
+											"type": "dx"
+										},
+										{
+											"type": "skill",
+											"name": "Brawling"
+										}
+									]
+								}
+							],
+							"reference": "B88",
+							"calc": {
+								"points": 5
+							},
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "99df4905-5e6c-48ae-8b6f-f90948f706c3",
+							"name": "Damage Resistance",
+							"physical": true,
+							"exotic": true,
+							"levels": "2",
+							"points_per_level": 5,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "47d87e2a-75d9-4667-9a04-304cec2fea5e",
+									"disabled": true,
+									"name": "Force Field",
+									"reference": "B47",
+									"cost_type": "percentage",
+									"cost": 20,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "9b7ce7ea-68c2-4321-a0d8-1dbba9e9ef26",
+									"disabled": true,
+									"name": "Hardened",
+									"reference": "B47",
+									"cost_type": "percentage",
+									"cost": 20,
+									"affects": "total",
+									"levels": 1
+								},
+								{
+									"type": "modifier",
+									"id": "20f67b4b-1742-49b0-882e-d7661c90a8fd",
+									"disabled": true,
+									"name": "Absorption",
+									"reference": "B46",
+									"cost_type": "percentage",
+									"cost": 80,
+									"affects": "total",
+									"notes": "Enhances @Trait@"
+								},
+								{
+									"type": "modifier",
+									"id": "03d5e4c8-3435-4a97-8f6e-3e991b5885da",
+									"disabled": true,
+									"name": "Absorption",
+									"reference": "B46",
+									"cost_type": "percentage",
+									"cost": 80,
+									"affects": "total",
+									"notes": "Healing only"
+								},
+								{
+									"type": "modifier",
+									"id": "3706f68d-97ae-40f1-a0a7-4201cb190042",
+									"disabled": true,
+									"name": "Absorption",
+									"reference": "B46",
+									"cost_type": "percentage",
+									"cost": 100,
+									"affects": "total",
+									"notes": "Enhances any trait"
+								},
+								{
+									"type": "modifier",
+									"id": "30a096b6-3caf-4b6f-956d-18e08e7b3146",
+									"disabled": true,
+									"name": "Reflection",
+									"reference": "B47",
+									"cost_type": "percentage",
+									"cost": 100,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "7847326d-24ab-4ae6-8a53-003f05a5cb65",
+									"disabled": true,
+									"name": "Bane",
+									"reference": "H14",
+									"cost_type": "points",
+									"cost": -1,
+									"affects": "total",
+									"notes": "@Rare@"
+								},
+								{
+									"type": "modifier",
+									"id": "13b9ccf8-6d06-411d-9b5b-7a50e7e2a56b",
+									"disabled": true,
+									"name": "Bane",
+									"reference": "H14",
+									"cost_type": "percentage",
+									"cost": -5,
+									"affects": "total",
+									"notes": "@Occasional@"
+								},
+								{
+									"type": "modifier",
+									"id": "433bef52-e2f9-46d3-bd1f-7371e62ac37b",
+									"disabled": true,
+									"name": "Bane",
+									"reference": "H14",
+									"cost_type": "percentage",
+									"cost": -10,
+									"affects": "total",
+									"notes": "@Common@"
+								},
+								{
+									"type": "modifier",
+									"id": "1d4e14d6-9f6d-4043-a395-132ef1e84f4c",
+									"disabled": true,
+									"name": "Bane",
+									"reference": "H14",
+									"cost_type": "percentage",
+									"cost": -15,
+									"affects": "total",
+									"notes": "@Very Common@"
+								},
+								{
+									"type": "modifier",
+									"id": "dcc771e7-bbef-4cf7-8176-10988f0a1704",
+									"disabled": true,
+									"name": "Directional",
+									"reference": "B47",
+									"cost_type": "percentage",
+									"cost": -20,
+									"affects": "total",
+									"notes": "Front"
+								},
+								{
+									"type": "modifier",
+									"id": "5d0d4dd7-f91a-4bfc-98bf-c170b41be69a",
+									"disabled": true,
+									"name": "Flexible",
+									"reference": "B47",
+									"cost_type": "percentage",
+									"cost": -20,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "df73be22-29ac-449d-bda7-932445caea2a",
+									"disabled": true,
+									"name": "Limited",
+									"reference": "B46",
+									"cost_type": "percentage",
+									"cost": -20,
+									"affects": "total",
+									"notes": "@Very Common Attack Form@"
+								},
+								{
+									"type": "modifier",
+									"id": "95e1a900-a14b-4d6a-8831-916b59a73b58",
+									"disabled": true,
+									"name": "Semi-Ablative",
+									"reference": "B47",
+									"cost_type": "percentage",
+									"cost": -20,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "35784da3-e984-4464-a8b0-348f864988f6",
+									"disabled": true,
+									"name": "Can't wear armor",
+									"reference": "B47",
+									"cost_type": "percentage",
+									"cost": -40,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "a0952a57-f011-4022-ab37-8f155fe98c67",
+									"disabled": true,
+									"name": "Directional",
+									"reference": "B47",
+									"cost_type": "percentage",
+									"cost": -40,
+									"affects": "total",
+									"notes": "@Direction: Back, Right, Left, Top or Underside@"
+								},
+								{
+									"type": "modifier",
+									"id": "d6e581a1-27f5-4725-a2bd-ac85e0591569",
+									"disabled": true,
+									"name": "Limited",
+									"reference": "B46",
+									"cost_type": "percentage",
+									"cost": -40,
+									"affects": "total",
+									"notes": "@Common Attack Form@"
+								},
+								{
+									"type": "modifier",
+									"id": "ea3442b8-cc97-4ed5-87e0-e9a8788e937e",
+									"disabled": true,
+									"name": "Tough Skin",
+									"cost_type": "percentage",
+									"cost": -40,
+									"affects": "total",
+									"notes": "Effects that just require skin contact or a scratch ignore this DR"
+								},
+								{
+									"type": "modifier",
+									"id": "1b5e2d8d-8384-469d-b44e-c104e2eae3b3",
+									"disabled": true,
+									"name": "Limited",
+									"reference": "B46",
+									"cost_type": "percentage",
+									"cost": -60,
+									"affects": "total",
+									"notes": "@Occasional Attack Form@"
+								},
+								{
+									"type": "modifier",
+									"id": "00c9625d-3ccd-40a5-907d-420987d50029",
+									"disabled": true,
+									"name": "Ablative",
+									"reference": "B47",
+									"cost_type": "percentage",
+									"cost": -80,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "77b1bfd8-ca29-483d-8851-bc498568405d",
+									"disabled": true,
+									"name": "Limited",
+									"reference": "B46",
+									"cost_type": "percentage",
+									"cost": -80,
+									"affects": "total",
+									"notes": "@Rare Attack Form@"
+								},
+								{
+									"type": "modifier",
+									"id": "48cd12b4-8688-4130-88c5-3bbe3bf95d1e",
+									"disabled": true,
+									"name": "Laminate",
+									"reference": "RSWL18",
+									"cost_type": "percentage",
+									"cost": 10,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "ef5c8a05-8756-4e03-86ac-da656b584d52",
+									"disabled": true,
+									"name": "Malediction-Proof",
+									"reference": "PSI14",
+									"cost_type": "percentage",
+									"cost": 50,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "da53ec62-2526-4c2c-aef8-36221636e573",
+									"disabled": true,
+									"name": "Maledictions Only",
+									"reference": "PSI14",
+									"cost_type": "percentage",
+									"cost": 0,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "99f4d4d2-6046-4293-83e8-ea218dffce00",
+									"disabled": true,
+									"name": "Partial (@Location, 1 level per -1 Per Hit Modifier, Torso is -10% thus level 1@)",
+									"reference": "B47",
+									"cost_type": "percentage",
+									"cost": -10,
+									"affects": "total"
+								}
+							],
+							"reference": "B47",
+							"calc": {
+								"points": 10
+							},
+							"features": [
+								{
+									"type": "dr_bonus",
+									"amount": 1,
+									"per_level": true,
+									"location": "skull"
+								},
+								{
+									"type": "dr_bonus",
+									"amount": 1,
+									"per_level": true,
+									"location": "face"
+								},
+								{
+									"type": "dr_bonus",
+									"amount": 1,
+									"per_level": true,
+									"location": "neck"
+								},
+								{
+									"type": "dr_bonus",
+									"amount": 1,
+									"per_level": true,
+									"location": "torso"
+								},
+								{
+									"type": "dr_bonus",
+									"amount": 1,
+									"per_level": true,
+									"location": "vitals"
+								},
+								{
+									"type": "dr_bonus",
+									"amount": 1,
+									"per_level": true,
+									"location": "groin"
+								},
+								{
+									"type": "dr_bonus",
+									"amount": 1,
+									"per_level": true,
+									"location": "arm"
+								},
+								{
+									"type": "dr_bonus",
+									"amount": 1,
+									"per_level": true,
+									"location": "hand"
+								},
+								{
+									"type": "dr_bonus",
+									"amount": 1,
+									"per_level": true,
+									"location": "leg"
+								},
+								{
+									"type": "dr_bonus",
+									"amount": 1,
+									"per_level": true,
+									"location": "foot"
+								},
+								{
+									"type": "dr_bonus",
+									"amount": 1,
+									"per_level": true,
+									"location": "tail"
+								},
+								{
+									"type": "dr_bonus",
+									"amount": 1,
+									"per_level": true,
+									"location": "wing"
+								},
+								{
+									"type": "dr_bonus",
+									"amount": 1,
+									"per_level": true,
+									"location": "fin"
+								},
+								{
+									"type": "dr_bonus",
+									"amount": 1,
+									"per_level": true,
+									"location": "brain"
+								}
+							],
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "01ab031a-9e98-41c6-a0fb-28d715899944",
+							"name": "Extended Lifespan",
+							"physical": true,
+							"exotic": true,
+							"levels": "7",
+							"points_per_level": 2,
+							"reference": "B53",
+							"calc": {
+								"points": 14
+							},
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage_container",
+							"id": "3e87a9ce-31e2-4a81-8035-039959a5bf8e",
+							"name": "Flight and wings",
+							"calc": {
+								"points": 35
+							},
+							"open": true,
+							"children": [
+								{
+									"type": "advantage",
+									"id": "60a3e99b-340a-4a4e-a1d4-d54df514b09e",
+									"name": "Crushing Striker (Wings)",
+									"physical": true,
+									"exotic": true,
+									"base_points": 5,
+									"weapons": [
+										{
+											"type": "melee_weapon",
+											"damage": {
+												"type": "cr",
+												"st": "thr",
+												"modifier_per_die": 1
+											},
+											"reach": "C",
+											"parry": "0",
+											"block": "No",
+											"calc": {
+												"level": 0,
+												"parry": "0",
+												"block": "No",
+												"damage": "thr (+1 per die) cr"
+											},
+											"defaults": [
+												{
+													"type": "dx"
+												},
+												{
+													"type": "skill",
+													"name": "Brawling"
+												}
+											]
+										}
+									],
+									"reference": "B88",
+									"calc": {
+										"points": 5
+									},
+									"categories": [
+										"Advantage"
+									]
+								},
+								{
+									"type": "advantage",
+									"id": "ca6a47ec-c001-4bcf-b9bb-d8b1d02929e1",
+									"name": "Flight",
+									"physical": true,
+									"exotic": true,
+									"base_points": 40,
+									"modifiers": [
+										{
+											"type": "modifier",
+											"id": "50b311d0-edd6-4be4-9793-2ca69aef0e5f",
+											"disabled": true,
+											"name": "Newtonian Space Flight",
+											"reference": "B56",
+											"cost_type": "percentage",
+											"cost": 25,
+											"affects": "total"
+										},
+										{
+											"type": "modifier",
+											"id": "cc2be9d8-f588-4a65-942f-2183307c8806",
+											"disabled": true,
+											"name": "Space Flight",
+											"reference": "B56",
+											"cost_type": "percentage",
+											"cost": 50,
+											"affects": "total"
+										},
+										{
+											"type": "modifier",
+											"id": "4e2cb5ee-bfe1-4f4c-9266-d328adf65ddf",
+											"disabled": true,
+											"name": "Cannot Hover",
+											"reference": "B56",
+											"cost_type": "percentage",
+											"cost": -15,
+											"affects": "total"
+										},
+										{
+											"type": "modifier",
+											"id": "e7afc7ef-8130-4926-b5e6-2520dbbd5d6f",
+											"disabled": true,
+											"name": "Controlled Gliding",
+											"reference": "B56",
+											"cost_type": "percentage",
+											"cost": -45,
+											"affects": "total"
+										},
+										{
+											"type": "modifier",
+											"id": "685d0fc9-a289-425f-a804-b8186146b722",
+											"disabled": true,
+											"name": "Gliding",
+											"reference": "B56",
+											"cost_type": "percentage",
+											"cost": -50,
+											"affects": "total"
+										},
+										{
+											"type": "modifier",
+											"id": "0b41dcde-be96-4d4b-96d2-1d681e680b00",
+											"disabled": true,
+											"name": "Lighter Than Air",
+											"reference": "B56",
+											"cost_type": "percentage",
+											"cost": -10,
+											"affects": "total"
+										},
+										{
+											"type": "modifier",
+											"id": "402068e3-a8a2-4f00-bdcd-e4f354fa72c5",
+											"disabled": true,
+											"name": "Low Ceiling",
+											"reference": "B56",
+											"cost_type": "percentage",
+											"cost": -10,
+											"affects": "total",
+											"notes": "30'"
+										},
+										{
+											"type": "modifier",
+											"id": "e3d674b0-c98b-4e42-9e6c-627b5cdaf79e",
+											"disabled": true,
+											"name": "Low Ceiling",
+											"reference": "B56",
+											"cost_type": "percentage",
+											"cost": -20,
+											"affects": "total",
+											"notes": "10'"
+										},
+										{
+											"type": "modifier",
+											"id": "eb3640a3-8d45-4aed-b31a-a705b1322097",
+											"disabled": true,
+											"name": "Low Ceiling",
+											"reference": "B56",
+											"cost_type": "percentage",
+											"cost": -25,
+											"affects": "total",
+											"notes": "5'"
+										},
+										{
+											"type": "modifier",
+											"id": "b811aac3-e8b0-4863-8ded-ea74061219fd",
+											"disabled": true,
+											"name": "Small Wings",
+											"reference": "B56",
+											"cost_type": "percentage",
+											"cost": -10,
+											"affects": "total"
+										},
+										{
+											"type": "modifier",
+											"id": "1a530e84-a42d-4015-9bb1-f562c11c00bc",
+											"disabled": true,
+											"name": "Space Flight Only",
+											"reference": "B56",
+											"cost_type": "percentage",
+											"cost": -75,
+											"affects": "total"
+										},
+										{
+											"type": "modifier",
+											"id": "8e0edaa8-7d61-489f-8e21-4cd9db1596fa",
+											"name": "Winged",
+											"reference": "B56",
+											"cost_type": "percentage",
+											"cost": -25,
+											"affects": "total"
+										}
+									],
+									"reference": "B56",
+									"calc": {
+										"points": 30
+									}
+								}
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "75a53794-32b1-44e6-85e6-bbb0682487e0",
+							"name": "High Pain Threshold",
+							"physical": true,
+							"base_points": 10,
+							"reference": "B59",
+							"calc": {
+								"points": 10
+							},
+							"notes": "Never suffer shock penalties when injured; +3 on all HT rolls to avoid knockdown and stunning; +3 to resist torture"
+						},
+						{
+							"type": "advantage",
+							"id": "7e5c247b-0ee3-48ca-a5de-89355f299a49",
+							"name": "Longevity",
+							"physical": true,
+							"base_points": 2,
+							"reference": "B66",
+							"calc": {
+								"points": 2
+							},
+							"notes": "You fail aging rolls only on a 17 or 18, or only on an 18 if your modified HT is 17 or better",
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "ca86de83-ede7-436f-b5b6-9baf9b84d0c4",
+							"name": "Magery",
+							"mental": true,
+							"supernatural": true,
+							"levels": "0",
+							"base_points": 5,
+							"points_per_level": 10,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "5e597612-e38f-4aff-9fb0-dff0066c58b7",
+									"disabled": true,
+									"name": "Dance",
+									"cost_type": "percentage",
+									"cost": -40,
+									"affects": "levels_only"
+								},
+								{
+									"type": "modifier",
+									"id": "91c3dfe7-0062-438a-a7f8-5eeaa7fb4e1c",
+									"disabled": true,
+									"name": "Dark-Aspected",
+									"cost_type": "percentage",
+									"cost": -50,
+									"affects": "levels_only"
+								},
+								{
+									"type": "modifier",
+									"id": "0c9c7784-cd08-4e7f-ae91-f55dd7f17250",
+									"disabled": true,
+									"name": "Day-Aspected",
+									"cost_type": "percentage",
+									"cost": -40,
+									"affects": "levels_only"
+								},
+								{
+									"type": "modifier",
+									"id": "8c721cbf-c4a1-4223-980c-13ddd1454f33",
+									"disabled": true,
+									"name": "Musical",
+									"cost_type": "percentage",
+									"cost": -50,
+									"affects": "levels_only"
+								},
+								{
+									"type": "modifier",
+									"id": "65ce6e16-5065-400c-a7f5-fb9412845649",
+									"disabled": true,
+									"name": "Night-Aspected",
+									"cost_type": "percentage",
+									"cost": -40,
+									"affects": "levels_only"
+								},
+								{
+									"type": "modifier",
+									"id": "600ffa85-c867-4421-9bdb-11e97928b8ce",
+									"disabled": true,
+									"name": "One College",
+									"cost_type": "percentage",
+									"cost": -40,
+									"affects": "levels_only",
+									"notes": "@College@"
+								},
+								{
+									"type": "modifier",
+									"id": "8dd45596-d7f1-4312-a70b-289a3a6a4c30",
+									"disabled": true,
+									"name": "Solitary",
+									"cost_type": "percentage",
+									"cost": -40,
+									"affects": "levels_only"
+								},
+								{
+									"type": "modifier",
+									"id": "3e608495-43dd-4e58-b89e-05f368de129b",
+									"disabled": true,
+									"name": "Song",
+									"cost_type": "percentage",
+									"cost": -40,
+									"affects": "levels_only"
+								}
+							],
+							"reference": "B66",
+							"calc": {
+								"points": 5
+							},
+							"features": [
+								{
+									"type": "spell_bonus",
+									"amount": 1,
+									"per_level": true,
+									"match": "all_colleges"
+								},
+								{
+									"type": "skill_bonus",
+									"amount": 1,
+									"per_level": true,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "thaumatology"
+									}
+								}
+							],
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "181236f7-2754-4088-9548-47991e66da04",
+							"name": "Nictitating Membrane",
+							"physical": true,
+							"exotic": true,
+							"levels": "2",
+							"points_per_level": 1,
+							"reference": "B71",
+							"calc": {
+								"points": 2
+							}
+						},
+						{
+							"type": "advantage",
+							"id": "c67b2d3f-a0f5-4d94-b5ea-8dc415d4b67b",
+							"name": "Night Vision",
+							"physical": true,
+							"levels": "10",
+							"points_per_level": 1,
+							"reference": "B71",
+							"calc": {
+								"points": 10
+							}
+						},
+						{
+							"type": "advantage",
+							"id": "613a024e-1d27-4d76-85f8-422dc3e45eb2",
+							"name": "Penetrating Voice",
+							"physical": true,
+							"base_points": 1,
+							"reference": "B101",
+							"calc": {
+								"points": 1
+							},
+							"notes": "In situations where you want to be heard over noise, others get +3 to their Hearing roll",
+							"categories": [
+								"Perk"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "74c8d858-965f-4cfd-ba86-9c64c70fd68d",
+							"name": "Resistant",
+							"physical": true,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "98f2b50c-2270-4dff-a0c7-d7c2fb84cdba",
+									"disabled": true,
+									"name": "@Very Common: Metabolic Hazards, etc.@",
+									"reference": "B80",
+									"cost_type": "points",
+									"cost": 30,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "dd06c063-f03c-43ab-b863-d267339fe7c9",
+									"disabled": true,
+									"name": "@Common: Poison, Sickness, etc.@",
+									"reference": "B81",
+									"cost_type": "points",
+									"cost": 15,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "f53d2c98-c1cf-4f8d-9292-ab227c98da15",
+									"name": "Disease",
+									"reference": "B81",
+									"cost_type": "points",
+									"cost": 10,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "91bf635f-afca-438f-9c09-abdf2675547c",
+									"disabled": true,
+									"name": "@Rare: Acceleration, Altitude Sickness, Bends, Seasickness, Space Sickness, Nanomachines, etc.@",
+									"reference": "B81",
+									"cost_type": "points",
+									"cost": 5,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "c219d727-541f-4cf7-9433-e11009cb8bcf",
+									"name": "Immunity",
+									"reference": "B81",
+									"cost_type": "multiplier",
+									"cost": 1
+								},
+								{
+									"type": "modifier",
+									"id": "f3f0f5b1-65b6-417c-a26c-bb25dc7a3dce",
+									"disabled": true,
+									"name": "+8 to all HT rolls to resist",
+									"reference": "B81",
+									"cost_type": "multiplier",
+									"cost": 0.5
+								},
+								{
+									"type": "modifier",
+									"id": "06576805-fcee-4369-9ce1-85b32d3e814b",
+									"disabled": true,
+									"name": "+3 to all HT rolls to resist",
+									"reference": "B81",
+									"cost_type": "multiplier",
+									"cost": 0.33
+								}
+							],
+							"reference": "B81",
+							"calc": {
+								"points": 10
+							}
+						},
+						{
+							"type": "advantage",
+							"id": "f2587ee5-4c95-4aae-b862-92ffadfae549",
+							"name": "Sharp Claws",
+							"physical": true,
+							"base_points": 5,
+							"weapons": [
+								{
+									"type": "melee_weapon",
+									"damage": {
+										"type": "cut",
+										"st": "thr",
+										"base": "-1"
+									},
+									"usage": "Slash",
+									"reach": "C",
+									"parry": "0",
+									"block": "No",
+									"calc": {
+										"level": 0,
+										"parry": "0",
+										"block": "No",
+										"damage": "thr-1 cut"
+									},
+									"defaults": [
+										{
+											"type": "dx"
+										},
+										{
+											"type": "skill",
+											"name": "Brawling"
+										},
+										{
+											"type": "skill",
+											"name": "Boxing"
+										},
+										{
+											"type": "skill",
+											"name": "Karate"
+										}
+									]
+								},
+								{
+									"type": "melee_weapon",
+									"damage": {
+										"type": "cut",
+										"st": "thr"
+									},
+									"usage": "Kick",
+									"reach": "C,1",
+									"parry": "No",
+									"block": "No",
+									"calc": {
+										"level": 0,
+										"parry": "No",
+										"block": "No",
+										"damage": "thr cut"
+									},
+									"defaults": [
+										{
+											"type": "dx",
+											"modifier": -2
+										},
+										{
+											"type": "skill",
+											"name": "Karate",
+											"modifier": -2
+										},
+										{
+											"type": "skill",
+											"name": "Brawling",
+											"modifier": -2
+										}
+									]
+								}
+							],
+							"reference": "B42",
+							"calc": {
+								"points": 5
+							},
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "6a62299d-786f-4149-96ab-1143af23c892",
+							"name": "Sharp Teeth",
+							"physical": true,
+							"exotic": true,
+							"base_points": 1,
+							"weapons": [
+								{
+									"type": "melee_weapon",
+									"damage": {
+										"type": "cut",
+										"st": "thr",
+										"base": "-1"
+									},
+									"usage": "Bite",
+									"reach": "C",
+									"parry": "No",
+									"block": "No",
+									"calc": {
+										"level": 0,
+										"parry": "No",
+										"block": "No",
+										"damage": "thr-1 cut"
+									},
+									"defaults": [
+										{
+											"type": "skill",
+											"name": "Brawling"
+										},
+										{
+											"type": "dx"
+										}
+									]
+								}
+							],
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "243851f3-1b89-4c57-aa69-97584e51364b",
+									"disabled": true,
+									"name": "Provided by Vampiric Bite",
+									"reference": "B96",
+									"cost_type": "points",
+									"cost": -1,
+									"affects": "total"
+								}
+							],
+							"reference": "B91",
+							"calc": {
+								"points": 1
+							},
+							"categories": [
+								"Perk"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "6d0616ef-1159-4509-a22c-5b5e0c73c994",
+							"name": "Temperature Tolerance",
+							"physical": true,
+							"levels": "6",
+							"points_per_level": 1,
+							"reference": "B93",
+							"calc": {
+								"points": 6
+							}
+						}
+					]
+				},
+				{
+					"type": "advantage_container",
+					"id": "7d01e06a-8088-45e8-b3a8-50e9e250f69e",
+					"name": "Disadvantages",
+					"calc": {
+						"points": -55
+					},
+					"open": true,
+					"children": [
+						{
+							"type": "advantage",
+							"id": "41c0dba1-1070-4a3c-94c2-bf3ce2a6df1d",
+							"name": "Bad Grip",
+							"physical": true,
+							"levels": "3",
+							"points_per_level": -5,
+							"reference": "B123",
+							"calc": {
+								"points": -15
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "advantage_prereq",
+										"has": false,
+										"name": {
+											"compare": "is",
+											"qualifier": "no fine manipulators"
+										}
+									}
+								]
+							}
+						},
+						{
+							"type": "advantage",
+							"id": "8c33e07a-ded5-4474-80fb-b553250c60ac",
+							"name": "Gluttony",
+							"mental": true,
+							"base_points": -5,
+							"cr": 12,
+							"reference": "B137",
+							"calc": {
+								"points": -5
+							},
+							"notes": "Make a self-control roll when presented with a tempting morsel or good wine that, for some reason, you should resist. If you fail, you partake – regardless of the consequences.",
+							"categories": [
+								"Disadvantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "0c27f58c-d321-4f74-8642-b686417a3969",
+							"name": "Greed",
+							"mental": true,
+							"base_points": -15,
+							"cr": 12,
+							"reference": "B137",
+							"calc": {
+								"points": -15
+							},
+							"notes": "Make a self-control roll any time riches are offered – as payment for fair work, gains from adventure, spoils of crime, or just bait. If you fail, you do whatever it takes to get the payoff.",
+							"categories": [
+								"Disadvantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "91ffbfae-0d6b-4ec4-907c-3921a9dd29b9",
+							"name": "Horizontal",
+							"physical": true,
+							"exotic": true,
+							"base_points": -10,
+							"reference": "B139",
+							"calc": {
+								"points": -10
+							}
+						},
+						{
+							"type": "advantage",
+							"id": "c9772fc4-edc1-4d4b-8331-2fd4a847711c",
+							"name": "Miserliness",
+							"mental": true,
+							"base_points": -10,
+							"cr": 12,
+							"reference": "B144",
+							"calc": {
+								"points": -10
+							},
+							"notes": "Make a self-control roll any time you are called on to spend money. If the expenditure is large, this roll may be at -5 or worse (GM’s decision). If you fail, you refuse to spend the money.",
+							"categories": [
+								"Disadvantage"
+							]
+						}
+					]
+				},
+				{
+					"type": "advantage_container",
+					"id": "3c890db2-476d-455a-94f6-879cb43a819b",
+					"name": "Languages",
+					"calc": {
+						"points": -2
+					},
+					"open": true,
+					"children": [
+						{
+							"type": "advantage",
+							"id": "4b496e6d-ff66-461e-a24c-4b552a4152f0",
+							"name": "Language: Draconic",
+							"mental": true,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "e127d6b8-1997-4f9b-be4f-f2c79fc300c5",
+									"name": "Native",
+									"reference": "B23",
+									"cost_type": "points",
+									"cost": -6,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "2b1d095b-fb55-4f00-be42-66a7cf1fa0b6",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total",
+									"notes": "None"
+								},
+								{
+									"type": "modifier",
+									"id": "91634f19-3448-4b2a-810b-12387264036e",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Broken"
+								},
+								{
+									"type": "modifier",
+									"id": "7a84e05f-0e77-4b40-9b9c-4de5eafeaf76",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "6c3fbc6c-8a3b-4e9b-9adb-249dd2e242b0",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 3,
+									"affects": "total",
+									"notes": "Native"
+								},
+								{
+									"type": "modifier",
+									"id": "dbb77fb3-59d9-4b8f-a7f8-33bf2d23787d",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total",
+									"notes": "None"
+								},
+								{
+									"type": "modifier",
+									"id": "19a37aad-2ee9-43f7-b46c-57b9528bf9ef",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Broken"
+								},
+								{
+									"type": "modifier",
+									"id": "b9ce3143-9fbf-4aa2-9632-f874aecb4b8c",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "4675e3ae-69d2-4355-9910-dde07e7cc124",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 3,
+									"affects": "total",
+									"notes": "Native"
+								}
+							],
+							"reference": "B24",
+							"calc": {
+								"points": -6
+							},
+							"categories": [
+								"Advantage",
+								"Language"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "59aef90c-04ae-4fb4-b1f7-4ccd85f6814f",
+							"name": "Language: ",
+							"mental": true,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "a987c2b7-ace0-4b05-bdf2-97b8c1912bdb",
+									"disabled": true,
+									"name": "Native",
+									"reference": "B23",
+									"cost_type": "points",
+									"cost": -6,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "99b0050f-ed4d-4d63-967c-43e229a0893e",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total",
+									"notes": "None"
+								},
+								{
+									"type": "modifier",
+									"id": "7a25fe4f-cecc-46fa-a9c9-77806e8803a2",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Broken"
+								},
+								{
+									"type": "modifier",
+									"id": "e7eef40b-725b-4cf6-b9e8-6e3bf3be6edc",
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "cdecae8a-341c-4904-9bff-eef39ff65af0",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 3,
+									"affects": "total",
+									"notes": "Native"
+								},
+								{
+									"type": "modifier",
+									"id": "99b637b4-42fc-4ed1-b7b8-a56be4dbbe2f",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total",
+									"notes": "None"
+								},
+								{
+									"type": "modifier",
+									"id": "5a5c030a-ff65-4a62-88c6-c263e5cb4276",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Broken"
+								},
+								{
+									"type": "modifier",
+									"id": "45f4c291-62f9-46e3-9f94-86d9f77e872d",
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "2c83292b-05fd-4c82-a7ec-64d2cd10fa02",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 3,
+									"affects": "total",
+									"notes": "Native"
+								}
+							],
+							"reference": "B24",
+							"calc": {
+								"points": 4
+							},
+							"categories": [
+								"Advantage",
+								"Language"
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

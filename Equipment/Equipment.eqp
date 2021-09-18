@@ -1,0 +1,36 @@
+{
+	"type": "equipment_list",
+	"version": 2,
+	"id": "d83f4f8b-d9e9-481d-85bb-087d653b50a2",
+	"rows": [
+		{
+			"type": "equipment",
+			"id": "e8eadc34-51b4-4761-a27f-7b791dff328b",
+			"quantity": 1,
+			"description": "Order of the Silver Blade's Pin",
+			"tech_level": "0",
+			"value": "120",
+			"weight": "0.12 lb",
+			"features": [
+				{
+					"type": "skill_bonus",
+					"amount": 1,
+					"selection_type": "skills_with_name",
+					"name": {
+						"compare": "is",
+						"qualifier": "Intimidation"
+					}
+				},
+				{
+					"type": "reaction_bonus",
+					"amount": 1,
+					"situation": "from common folk"
+				}
+			],
+			"notes": "A silver pin in the shape of a sword with a saphire incrusted in it's hilt, surounded by a silver ring. The symbol of the Silver Blade Order, commonly known for slaying beasts and creatures that terrorises the realm's good folk (by the right price, of course). ",
+			"categories": [
+				"Jewelry"
+			]
+		}
+	]
+}

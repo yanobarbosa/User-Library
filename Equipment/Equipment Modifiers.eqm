@@ -1,0 +1,34 @@
+{
+	"type": "eqp_modifier_list",
+	"version": 2,
+	"id": "0677d5d2-52d7-4dd1-bf31-16ea37cf3f91",
+	"rows": [
+		{
+			"type": "eqp_modifier_container",
+			"id": "8b03e968-e7dc-4bf1-afc6-0e0bfe7f5979",
+			"disabled": true,
+			"name": "Weapon",
+			"notes": "Weapon",
+			"open": true,
+			"children": [
+				{
+					"type": "eqp_modifier",
+					"id": "22aa688f-9a1b-4ad8-8ef0-aeb53c1e8a8c",
+					"name": "Dwarven",
+					"reference": "DFA106",
+					"cost_type": "to_base_cost",
+					"cost": "+4 CF",
+					"notes": "Changes a Parry of 0U to 0."
+				},
+				{
+					"type": "eqp_modifier",
+					"id": "683aea1c-0e6d-4dda-8ca3-2a20a982d727",
+					"name": "Elven",
+					"reference": "DFA106",
+					"cost_type": "to_base_cost",
+					"cost": "+16 CF"
+				}
+			]
+		}
+	]
+}
