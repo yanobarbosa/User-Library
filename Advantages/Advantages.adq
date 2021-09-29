@@ -1,0 +1,111 @@
+{
+	"type": "advantage_list",
+	"version": 2,
+	"id": "41e24b1b-e022-4939-9ee4-80f19df31c2e",
+	"rows": [
+		{
+			"type": "advantage",
+			"id": "0352b40c-e1f5-4b2e-960a-ce30edffa70d",
+			"name": "Increased Size",
+			"physical": true,
+			"levels": "1",
+			"calc": {
+				"points": 0
+			},
+			"features": [
+				{
+					"type": "attribute_bonus",
+					"amount": 1,
+					"per_level": true,
+					"attribute": "sm"
+				}
+			],
+			"categories": [
+				"Quirk"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "81459030-71a5-4dfb-937c-001285c1ca7b",
+			"name": "Reduced Size",
+			"physical": true,
+			"levels": "1",
+			"calc": {
+				"points": 0
+			},
+			"features": [
+				{
+					"type": "attribute_bonus",
+					"amount": -1,
+					"per_level": true,
+					"attribute": "sm"
+				}
+			],
+			"categories": [
+				"Quirk"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "b07d47fd-33df-4d16-90c8-1f3fbac65e92",
+			"name": "High TL",
+			"mental": true,
+			"levels": "1",
+			"points_per_level": 5,
+			"reference": "B23",
+			"calc": {
+				"points": 5
+			},
+			"categories": [
+				"Advantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "4b871cc8-fdfe-4784-9128-187d8a36be94",
+			"name": "Low TL",
+			"social": true,
+			"levels": "1",
+			"points_per_level": -5,
+			"reference": "B22",
+			"calc": {
+				"points": -5
+			},
+			"categories": [
+				"Disadvantage"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "3cc821db-063a-4449-a1de-12a82274d866",
+			"name": "Feathering",
+			"physical": true,
+			"exotic": true,
+			"base_points": 1,
+			"reference": "B101",
+			"calc": {
+				"points": 1
+			},
+			"notes": "Same as fur, but for birds",
+			"categories": [
+				"Perk"
+			]
+		},
+		{
+			"type": "advantage",
+			"id": "982600ff-c231-4c2b-820e-94dd6f0cc754",
+			"name": "Mana Powered",
+			"exotic": true,
+			"supernatural": true,
+			"base_points": -20,
+			"reference": "B134",
+			"calc": {
+				"points": -20
+			},
+			"notes": "Like electrical, but affected by Mana Surge",
+			"categories": [
+				"Disadvantage"
+			]
+		}
+	]
+}

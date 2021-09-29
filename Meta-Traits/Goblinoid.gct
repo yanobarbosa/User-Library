@@ -1,27 +1,27 @@
 {
 	"type": "template",
 	"version": 2,
-	"id": "2f40cd1d-bd9c-459b-b5e6-2a4d6aa47e54",
+	"id": "905326c9-cbd2-47cf-a88f-66414a89ff27",
 	"advantages": [
 		{
 			"type": "advantage_container",
-			"id": "392c6272-2f46-4533-8e04-a6f3e7b6d858",
-			"container_type": "race",
-			"name": "Hobgoblin",
+			"id": "4a9e0577-ebc8-4c8a-9b27-89b871320802",
+			"container_type": "meta_trait",
+			"name": "Goblinoid",
 			"calc": {
-				"points": 13
+				"points": 19
 			},
 			"open": true,
 			"children": [
 				{
 					"type": "advantage",
-					"id": "b2919560-7ea0-47f3-8d9d-9cc330eae158",
+					"id": "e5f82b6f-9417-4bd2-9441-2d4a47c09ba8",
 					"name": "Appearance",
 					"physical": true,
 					"modifiers": [
 						{
 							"type": "modifier",
-							"id": "592c1188-42ad-44ba-b0b3-37f96b915fa7",
+							"id": "baa8f01e-ec00-41e8-829c-e0e429085508",
 							"disabled": true,
 							"name": "Universal",
 							"cost_type": "percentage",
@@ -30,7 +30,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "656381b9-b0e9-4c7e-909a-6815b1e327fd",
+							"id": "3b39cbf0-4926-41b5-9f2f-e9e654c466d7",
 							"disabled": true,
 							"name": "Off-the-Shelf Looks",
 							"cost_type": "percentage",
@@ -39,7 +39,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "bd231238-6c75-4b8d-8a29-3b15e2a28bbf",
+							"id": "31438e56-5dd3-4848-a449-7e6ee34cfae0",
 							"disabled": true,
 							"name": "Androgynous",
 							"cost_type": "points",
@@ -48,7 +48,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "35369dd6-25eb-4341-bb8b-6ac270dd96cc",
+							"id": "7aa6b1c5-321d-4575-b279-ac0f2ea9215f",
 							"disabled": true,
 							"name": "Impressive",
 							"cost_type": "points",
@@ -57,7 +57,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "85c371bf-33d7-4d67-8201-7590c14384f2",
+							"id": "bcd42097-ef1e-4582-a959-e33a0a4e95a8",
 							"disabled": true,
 							"name": "Attractive",
 							"cost_type": "points",
@@ -66,7 +66,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "6f3472b1-d872-43d4-b751-9c31b4e3df74",
+							"id": "8e65bde2-45d5-4aea-b95f-79d6fd154169",
 							"disabled": true,
 							"name": "Average",
 							"cost_type": "points",
@@ -75,7 +75,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "21be9f5b-4bb0-40df-afe2-84fd26888fb8",
+							"id": "c584779c-f08a-4d13-9db6-61cb5f3cb1c2",
 							"disabled": true,
 							"name": "Horrific",
 							"cost_type": "points",
@@ -84,7 +84,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "7d336cc9-1914-4866-a7ce-d6b9a24b838a",
+							"id": "936160e3-07c1-4c16-a91a-f4cf212741b4",
 							"disabled": true,
 							"name": "Monstrous",
 							"cost_type": "points",
@@ -93,7 +93,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "a8dcb4d0-3b8d-4377-857d-2adcd0bee769",
+							"id": "83f67ca9-f86c-4182-b7d0-16be4b0c7d83",
 							"disabled": true,
 							"name": "Hideous",
 							"cost_type": "points",
@@ -102,7 +102,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "2892513c-8fa5-4cce-a309-eda0f39016de",
+							"id": "1811a785-feb3-4ba0-8fb0-4d359dc54ec1",
 							"name": "Ugly",
 							"cost_type": "points",
 							"cost": -8,
@@ -110,7 +110,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "e1424236-365d-4ccc-826d-21d121bbd7f8",
+							"id": "40fbbd5f-79a1-4b50-b2be-efecbf39236b",
 							"disabled": true,
 							"name": "Unattractive",
 							"cost_type": "points",
@@ -119,7 +119,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "4e6350c5-3da5-4f8a-972b-860039470ab4",
+							"id": "d3601ac5-99b9-4b6b-aa5f-55e34c784bcf",
 							"disabled": true,
 							"name": "Handsome",
 							"cost_type": "points",
@@ -128,7 +128,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "102569be-9f44-46ec-a305-1a1f2edece2b",
+							"id": "67a7542a-15f6-4391-8b83-8e588c4df378",
 							"disabled": true,
 							"name": "Beautiful",
 							"cost_type": "points",
@@ -137,7 +137,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "e9df0e7e-37cb-46f9-b2d3-cdd4d89eebd3",
+							"id": "c710fcfa-15ff-4885-84f9-6a60fd4feb34",
 							"disabled": true,
 							"name": "Very Handsome",
 							"cost_type": "points",
@@ -146,7 +146,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "9fd35de5-f4d4-4616-bc1d-ffb00eba0140",
+							"id": "05e13057-4706-4cf3-a72a-973a345ac4dd",
 							"disabled": true,
 							"name": "Very Beautiful",
 							"cost_type": "points",
@@ -155,7 +155,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "be06623d-eef2-45d5-8388-f37566a010fc",
+							"id": "75efc104-a606-4173-8392-ec0be38b2a00",
 							"disabled": true,
 							"name": "Transcendent",
 							"cost_type": "points",
@@ -173,29 +173,14 @@
 				},
 				{
 					"type": "advantage",
-					"id": "bdc692ec-8c41-496a-9577-4a5b0427c27f",
-					"name": "Bad Temper",
-					"mental": true,
-					"base_points": -10,
-					"cr": 12,
-					"reference": "B124",
-					"calc": {
-						"points": -10
-					},
-					"categories": [
-						"Disadvantage"
-					]
-				},
-				{
-					"type": "advantage",
-					"id": "d7141be7-b790-4add-9ba5-dd59e666a7e0",
+					"id": "c64e6ba3-61b0-4650-b52f-22cda4cb890a",
 					"name": "Decreased Intelligence",
 					"mental": true,
-					"levels": "2",
+					"levels": "1",
 					"points_per_level": -20,
 					"reference": "B15",
 					"calc": {
-						"points": -40
+						"points": -20
 					},
 					"features": [
 						{
@@ -212,15 +197,15 @@
 				},
 				{
 					"type": "advantage",
-					"id": "7982dfaa-b82f-48ff-9a5f-bb681c403bbe",
+					"id": "ed880bf1-38dc-417a-bccd-30022b2d1f85",
 					"name": "Extra Hit Points",
 					"physical": true,
-					"levels": "2",
+					"levels": "1",
 					"points_per_level": 2,
 					"modifiers": [
 						{
 							"type": "modifier",
-							"id": "5e73a281-22f3-4651-831c-c81134e353aa",
+							"id": "45158b09-b58a-4744-bd3f-f7c77fe57aaa",
 							"disabled": true,
 							"name": "Size",
 							"cost_type": "percentage",
@@ -230,7 +215,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "70034786-c7d3-4324-8b75-41756d2d9fd9",
+							"id": "61a4967d-dadc-4fa9-a817-6ecf45ae3880",
 							"disabled": true,
 							"name": "No Fine Manipulators",
 							"cost_type": "percentage",
@@ -240,7 +225,7 @@
 					],
 					"reference": "B16",
 					"calc": {
-						"points": 4
+						"points": 2
 					},
 					"features": [
 						{
@@ -257,7 +242,16 @@
 				},
 				{
 					"type": "advantage",
-					"id": "6bea373d-86d7-49c1-9fea-23136741fa22",
+					"id": "14300671-0ac3-4780-a6c7-c8f42e487f83",
+					"name": "Feature: Pointy ears",
+					"physical": true,
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "74ba6f4d-bccf-476e-9c76-68dd14e151af",
 					"name": "Increased Health",
 					"physical": true,
 					"levels": "1",
@@ -281,15 +275,15 @@
 				},
 				{
 					"type": "advantage",
-					"id": "90e98d55-17cc-41dd-a63a-549216191b4a",
+					"id": "c7ce7756-8427-4a7d-9383-4fef897ecb3a",
 					"name": "Increased Perception",
 					"mental": true,
 					"physical": true,
-					"levels": "2",
+					"levels": "1",
 					"points_per_level": 5,
 					"reference": "B16",
 					"calc": {
-						"points": 10
+						"points": 5
 					},
 					"features": [
 						{
@@ -306,71 +300,14 @@
 				},
 				{
 					"type": "advantage",
-					"id": "a58e6205-8248-4162-9867-fcc9b24886c0",
-					"name": "Increased Strength",
-					"physical": true,
-					"levels": "2",
-					"points_per_level": 10,
-					"modifiers": [
-						{
-							"type": "modifier",
-							"id": "5a455890-f78e-45e9-b9f5-9afe6247c250",
-							"disabled": true,
-							"name": "No Fine Manipulators",
-							"reference": "B15",
-							"cost_type": "percentage",
-							"cost": -40,
-							"affects": "total"
-						},
-						{
-							"type": "modifier",
-							"id": "1f113ad6-3189-4460-8edb-a53d61e4bf9d",
-							"disabled": true,
-							"name": "Size",
-							"reference": "B15",
-							"cost_type": "percentage",
-							"cost": -10,
-							"affects": "total",
-							"levels": 1
-						},
-						{
-							"type": "modifier",
-							"id": "c33963b7-6fb2-4e46-8f5e-8ed78a8f7e5d",
-							"disabled": true,
-							"name": "Super-Effort",
-							"reference": "SU24",
-							"cost_type": "percentage",
-							"cost": 300,
-							"affects": "total"
-						}
-					],
-					"reference": "B14",
-					"calc": {
-						"points": 20
-					},
-					"features": [
-						{
-							"type": "attribute_bonus",
-							"amount": 1,
-							"per_level": true,
-							"attribute": "st"
-						}
-					],
-					"categories": [
-						"Advantage",
-						"Attribute"
-					]
-				},
-				{
-					"type": "advantage",
-					"id": "62dc7fbf-9c8b-4abf-b4a6-12403d7ffa4e",
+					"id": "91e7e47b-380e-4b29-9636-b80d066a199c",
 					"name": "Increased Will",
 					"mental": true,
-					"levels": "2",
+					"levels": "1",
 					"points_per_level": 5,
 					"reference": "B16",
 					"calc": {
-						"points": 10
+						"points": 5
 					},
 					"features": [
 						{
@@ -387,7 +324,7 @@
 				},
 				{
 					"type": "advantage",
-					"id": "2c5a681b-3a34-4125-bb4d-ca10892445a7",
+					"id": "9557328e-a30a-4aa5-9766-0198bd3bdaa6",
 					"name": "Infravision",
 					"physical": true,
 					"exotic": true,
@@ -395,7 +332,7 @@
 					"modifiers": [
 						{
 							"type": "modifier",
-							"id": "8450bd44-d06d-453d-bc22-eebb09247512",
+							"id": "f1425b52-808d-4304-97c3-ff159598a685",
 							"disabled": true,
 							"name": "No normal vision",
 							"reference": "B60",
@@ -414,7 +351,7 @@
 				},
 				{
 					"type": "advantage",
-					"id": "a2c99928-c468-4b4b-b800-7bbb5d652598",
+					"id": "fccad397-7c7a-49c7-9310-2f71df59d18b",
 					"name": "Rapid Healing",
 					"physical": true,
 					"base_points": 5,
@@ -443,13 +380,13 @@
 				},
 				{
 					"type": "advantage",
-					"id": "2092c2d0-9979-416d-a06a-50fa152d7688",
+					"id": "2db23d35-c70e-479f-9d86-8c0793b102a1",
 					"name": "Resistant",
 					"physical": true,
 					"modifiers": [
 						{
 							"type": "modifier",
-							"id": "47b88ce4-427b-4172-9fd7-279d5f81fc9c",
+							"id": "8d9f6082-5f83-469d-9dff-b1e755fdfe94",
 							"name": "Metabolic Hazards",
 							"reference": "B80",
 							"cost_type": "points",
@@ -458,7 +395,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "6419c6bb-ebf4-48dd-944b-21b34b898189",
+							"id": "9a4977d1-5c95-45f8-8c41-8243eb9a1d00",
 							"disabled": true,
 							"name": "@Common: Poison, Sickness, etc.@",
 							"reference": "B81",
@@ -468,7 +405,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "9338eb6a-4f56-4cf8-91ae-29f24445cb95",
+							"id": "e5e6984e-5a8c-4b1b-a0a8-836d5a749504",
 							"disabled": true,
 							"name": "@Occasional: Disease, Ingested Poison, etc.@",
 							"reference": "B81",
@@ -478,7 +415,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "28a234a5-7a91-473d-b9f7-847bbea99cff",
+							"id": "7414bf17-f270-4cd0-b4ba-2b71f4287108",
 							"disabled": true,
 							"name": "@Rare: Acceleration, Altitude Sickness, Bends, Seasickness, Space Sickness, Nanomachines, etc.@",
 							"reference": "B81",
@@ -488,7 +425,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "065ba493-2008-4d88-a350-4dd686743142",
+							"id": "d32d03d3-7682-4568-a49c-828d9fc2a334",
 							"disabled": true,
 							"name": "Immunity",
 							"reference": "B81",
@@ -497,7 +434,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "2a5e4284-c7e2-492b-8f7b-09bea768660f",
+							"id": "40ce3c46-78e5-4689-ba9b-b1f9a73af4d2",
 							"disabled": true,
 							"name": "+8 to all HT rolls to resist",
 							"reference": "B81",
@@ -506,7 +443,7 @@
 						},
 						{
 							"type": "modifier",
-							"id": "c17acd44-e03b-4ccf-95b1-ae6587098b7d",
+							"id": "895853a5-6a98-4cd6-baa8-b86d9fe9bc3e",
 							"name": "+3 to all HT rolls to resist",
 							"reference": "B81",
 							"cost_type": "multiplier",
@@ -516,65 +453,6 @@
 					"reference": "B81",
 					"calc": {
 						"points": 10
-					},
-					"categories": [
-						"Advantage"
-					]
-				},
-				{
-					"type": "advantage",
-					"id": "872fe8a8-1b90-415c-9289-333a0e8c8481",
-					"name": "Social Stigma (Savage)",
-					"social": true,
-					"base_points": -10,
-					"reference": "DF3:11",
-					"calc": {
-						"points": -10
-					},
-					"notes": "-2 reaction; -4 to skills; Denied entry to town on 6 or less",
-					"categories": [
-						"Disadvantage"
-					]
-				},
-				{
-					"type": "advantage",
-					"id": "4917effa-6ef3-42cb-8ca8-90665773b35d",
-					"name": "Teeth, Fangs",
-					"physical": true,
-					"exotic": true,
-					"base_points": 2,
-					"weapons": [
-						{
-							"type": "melee_weapon",
-							"damage": {
-								"type": "imp",
-								"st": "thr",
-								"base": "-1"
-							},
-							"usage": "Bite",
-							"reach": "C",
-							"parry": "No",
-							"block": "No",
-							"calc": {
-								"level": 0,
-								"parry": "No",
-								"block": "No",
-								"damage": "thr-1 imp"
-							},
-							"defaults": [
-								{
-									"type": "skill",
-									"name": "Brawling"
-								},
-								{
-									"type": "dx"
-								}
-							]
-						}
-					],
-					"reference": "B91",
-					"calc": {
-						"points": 2
 					},
 					"categories": [
 						"Advantage"

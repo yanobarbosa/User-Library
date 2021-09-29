@@ -1,0 +1,812 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "269dc65f-8557-42bd-8e8f-cd1dbbacd7e9",
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "dc1703f0-c42f-4c06-87ea-c41947e9b456",
+			"container_type": "meta_trait",
+			"name": "Avian",
+			"calc": {
+				"points": -11
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "3d94b4a0-ea4b-4d9a-80e6-9cc6a5134683",
+					"name": "Beak",
+					"physical": true,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "pi",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Peck",
+							"reach": "C",
+							"parry": "No",
+							"block": "No",
+							"calc": {
+								"level": 0,
+								"parry": "No",
+								"block": "No",
+								"damage": "thr-1 pi"
+							},
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								}
+							]
+						}
+					],
+					"reference": "B271",
+					"calc": {
+						"points": 0
+					},
+					"notes": "Natural Attack (bite) but piercing"
+				},
+				{
+					"type": "advantage",
+					"id": "91c110b8-3010-442b-9799-9c923b8e81ab",
+					"name": "Decreased Strength",
+					"physical": true,
+					"levels": "1",
+					"points_per_level": -10,
+					"reference": "B14",
+					"calc": {
+						"points": -10
+					},
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"amount": -1,
+							"per_level": true,
+							"attribute": "st"
+						}
+					],
+					"categories": [
+						"Attribute",
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "03f66cfb-a813-4e86-ae71-8a961b788ce7",
+					"name": "Disturbing Voice",
+					"physical": true,
+					"base_points": -10,
+					"reference": "B132",
+					"calc": {
+						"points": -10
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "advantage_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "voice"
+								}
+							}
+						]
+					},
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "30505c42-8c34-405b-8152-bf21c05c7226",
+					"name": "Feathering",
+					"physical": true,
+					"exotic": true,
+					"base_points": 1,
+					"reference": "B101",
+					"calc": {
+						"points": 1
+					},
+					"notes": "Same as fur, but for birds",
+					"categories": [
+						"Perk"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "2301cfa5-850a-4b20-b2c6-362b7ccee5a9",
+					"name": "Feature: Head armor not interchangeable with humans.",
+					"physical": true,
+					"reference": "DF3:15",
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "967220a4-48cb-4374-8086-09c8235c1a5c",
+					"name": "Feature: Torso armor not interchangeable with humans.",
+					"physical": true,
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "9ab3a5d5-3f8d-45de-b333-cbb6bd0ba010",
+					"name": "Flight",
+					"physical": true,
+					"exotic": true,
+					"base_points": 40,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "054a0ab9-1ee1-49d3-bc3e-31f33eb74556",
+							"disabled": true,
+							"name": "Newtonian Space Flight",
+							"reference": "B56",
+							"cost_type": "percentage",
+							"cost": 25,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "0a387502-e065-4e18-b7cc-fe9a3d577d46",
+							"disabled": true,
+							"name": "Space Flight",
+							"reference": "B56",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d1bbad8a-177c-439c-91d8-7d9ec6675340",
+							"disabled": true,
+							"name": "Cannot Hover",
+							"reference": "B56",
+							"cost_type": "percentage",
+							"cost": -15,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "9dc103cb-d328-4974-a18e-e20deb5b9c37",
+							"disabled": true,
+							"name": "Controlled Gliding",
+							"reference": "B56",
+							"cost_type": "percentage",
+							"cost": -45,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "253c3c78-3f86-4216-b360-a5959e3c5b37",
+							"disabled": true,
+							"name": "Gliding",
+							"reference": "B56",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "8ada9337-41b0-4999-ad46-59ca585b3ae5",
+							"disabled": true,
+							"name": "Lighter Than Air",
+							"reference": "B56",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "ac6661e9-ca22-44d8-829b-1f2a68fa228e",
+							"disabled": true,
+							"name": "Low Ceiling",
+							"reference": "B56",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"notes": "30'"
+						},
+						{
+							"type": "modifier",
+							"id": "24e6269b-284a-4b93-9680-fca4f843bbcd",
+							"disabled": true,
+							"name": "Low Ceiling",
+							"reference": "B56",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "10'"
+						},
+						{
+							"type": "modifier",
+							"id": "e981c964-651b-4686-9e74-f691cc713a18",
+							"disabled": true,
+							"name": "Low Ceiling",
+							"reference": "B56",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total",
+							"notes": "5'"
+						},
+						{
+							"type": "modifier",
+							"id": "2c760139-8d90-4b08-9181-2ec6822f55ab",
+							"disabled": true,
+							"name": "Small Wings",
+							"reference": "B56",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "0554f602-8ac1-45ea-8963-6a8cda1fee63",
+							"disabled": true,
+							"name": "Space Flight Only",
+							"reference": "B56",
+							"cost_type": "percentage",
+							"cost": -75,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "9a5f12e2-7544-45c7-8483-f43fa600bbd7",
+							"name": "Winged",
+							"reference": "B56",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "144cb834-c6e5-43e5-813f-bd5929282c3c",
+							"disabled": true,
+							"name": "Planetary",
+							"reference": "P50",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "af47be02-187f-4443-8b66-0a8331208888",
+							"disabled": true,
+							"name": "Requires Surface",
+							"reference": "P50",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "ccbbc4ef-d68b-4c1d-8892-78ad0825b61f",
+							"disabled": true,
+							"name": "Slow",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total",
+							"notes": "Basic Speed"
+						},
+						{
+							"type": "modifier",
+							"id": "7b53a843-0d3c-4b64-a85d-d3a3c807bc15",
+							"disabled": true,
+							"name": "Slow, Move 1",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": -45,
+							"affects": "total"
+						}
+					],
+					"reference": "B56",
+					"calc": {
+						"points": 30
+					},
+					"notes": "Air Move is Basic Speed x 2 (drop all fractions)",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "90e203bd-234c-4ec2-99e9-e00c1bc254f0",
+					"name": "Increased Dexterity",
+					"physical": true,
+					"levels": "1",
+					"points_per_level": 20,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "9f418d07-5e4d-4a72-9e19-bcb9359e15e2",
+							"disabled": true,
+							"name": "No Fine Manipulators",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total"
+						}
+					],
+					"reference": "B15",
+					"calc": {
+						"points": 20
+					},
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"per_level": true,
+							"attribute": "dx"
+						}
+					],
+					"categories": [
+						"Advantage",
+						"Attribute"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "a1cf8973-889c-41ed-bee1-3fa70c5983a9",
+					"name": "Language: ",
+					"mental": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "93a467a8-a74a-4755-96cf-3b0966f377bb",
+							"disabled": true,
+							"name": "Native",
+							"reference": "B23",
+							"cost_type": "points",
+							"cost": -6,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "41544414-7e6a-4e7d-b633-c1fa94b6cfef",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"id": "7a08d1c5-110a-42f5-9f1e-db31978ca5e0",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"id": "58ae5fcc-6dd7-4033-957a-2f4ebbca5aa5",
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"id": "207d1c99-01fe-468b-9884-d79be1e75073",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						},
+						{
+							"type": "modifier",
+							"id": "cd0d0b04-2de7-4ef4-b0b7-8fa048b8685d",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"id": "5c7b4244-316d-436e-bb0f-51b31048d639",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"id": "8433e616-fc60-455f-b3fc-747a1aa39085",
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"id": "191c5d27-5232-4bd5-bebd-1f54defc9371",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						}
+					],
+					"reference": "B24",
+					"calc": {
+						"points": 4
+					},
+					"categories": [
+						"Advantage",
+						"Language"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "c3e37c4a-8949-490d-a093-7e86c0bafabd",
+					"name": "Language: Birdfolk",
+					"mental": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "bec7f0d6-7871-45fe-80f8-4ffe3063651a",
+							"name": "Native",
+							"reference": "B23",
+							"cost_type": "points",
+							"cost": -6,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "dc8e16d7-835d-4421-b289-34f8b4838d77",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"id": "3da235a3-0aa8-432d-8fa9-13b0262ebbab",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"id": "e701c754-036e-4481-8663-5e35a1989153",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"id": "507e70ed-6369-447a-be64-ac79e4876391",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						},
+						{
+							"type": "modifier",
+							"id": "0dcbf534-28d8-455a-a1bf-faa99d781e07",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"id": "85d2acc4-df0c-4695-be7d-95c83b641bbe",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"id": "b7a53627-b681-4eeb-94a6-36e508eb85b6",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"id": "79409880-43ab-47f2-aaf5-6869fc5f8c4f",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						}
+					],
+					"reference": "B24",
+					"calc": {
+						"points": -6
+					},
+					"categories": [
+						"Advantage",
+						"Language"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "223ca5a6-90b0-45c2-baa9-d8c07419bc8f",
+					"name": "Sharp Claws",
+					"physical": true,
+					"base_points": 5,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Slash",
+							"reach": "C",
+							"parry": "0",
+							"block": "No",
+							"calc": {
+								"level": 0,
+								"parry": "0",
+								"block": "No",
+								"damage": "thr-1 cut"
+							},
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "skill",
+									"name": "Boxing"
+								},
+								{
+									"type": "skill",
+									"name": "Karate"
+								}
+							]
+						},
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "cut",
+								"st": "thr"
+							},
+							"usage": "Kick",
+							"reach": "C,1",
+							"parry": "No",
+							"block": "No",
+							"calc": {
+								"level": 0,
+								"parry": "No",
+								"block": "No",
+								"damage": "thr cut"
+							},
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Karate",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Brawling",
+									"modifier": -2
+								}
+							]
+						}
+					],
+					"reference": "B42",
+					"calc": {
+						"points": 5
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "44d0d081-b362-4a4c-99bb-f6f006fd74cc",
+					"name": "Skinny",
+					"physical": true,
+					"base_points": -5,
+					"reference": "B18",
+					"calc": {
+						"points": -5
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "attribute_prereq",
+								"has": true,
+								"which": "ht",
+								"qualifier": {
+									"compare": "at_most",
+									"qualifier": 14
+								}
+							}
+						]
+					},
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": -2,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "disguise"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -2,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "shadowing"
+							}
+						}
+					],
+					"notes": "-2 ST vs. knockback",
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "5beeaca9-b35f-4ed9-a18e-895394be6024",
+					"name": "Vulnerability",
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "852560f4-b033-4991-b962-5dece7907ef2",
+							"disabled": true,
+							"name": "@Rare attack@",
+							"reference": "B161",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "7e0e9a12-2b56-4f7b-824c-53f41ceea06b",
+							"disabled": true,
+							"name": "@Occasional attack@",
+							"reference": "B161",
+							"cost_type": "points",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d83b28f8-1169-4794-9857-02ac84b196ed",
+							"disabled": true,
+							"name": "@Common attack@",
+							"reference": "B161",
+							"cost_type": "points",
+							"cost": -15,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "af7b7996-1073-4863-b60d-c371fb4fb492",
+							"name": "Crushing",
+							"reference": "B161",
+							"cost_type": "points",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "de876edb-1050-4b91-8618-709c4785eed8",
+							"name": "Wounding x2",
+							"reference": "B161",
+							"cost_type": "multiplier",
+							"cost": 2
+						},
+						{
+							"type": "modifier",
+							"id": "45d1c185-cd35-4d86-ac68-cb6761c2156d",
+							"disabled": true,
+							"name": "Wounding x3",
+							"reference": "B161",
+							"cost_type": "multiplier",
+							"cost": 3
+						},
+						{
+							"type": "modifier",
+							"id": "342ea3ea-4292-4d0f-a852-6928bd07a33d",
+							"disabled": true,
+							"name": "Wounding x4",
+							"reference": "B161",
+							"cost_type": "multiplier",
+							"cost": 4
+						},
+						{
+							"type": "modifier",
+							"id": "879e0cd7-4d05-4c69-852c-4fbf95632c0b",
+							"disabled": true,
+							"name": "Fatigue Only",
+							"reference": "B161",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						}
+					],
+					"reference": "B161",
+					"calc": {
+						"points": -40
+					},
+					"categories": [
+						"Disadvantage"
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,2219 @@
+{
+	"type": "character",
+	"version": 2,
+	"id": "3aacd100-568e-46a2-a1dc-ec42dfae37e7",
+	"settings": {
+		"default_length_units": "m",
+		"default_weight_units": "kg",
+		"user_description_display": "tooltip",
+		"modifiers_display": "inline",
+		"notes_display": "inline",
+		"skill_level_adj_display": "tooltip",
+		"use_multiplicative_modifiers": false,
+		"use_modifying_dice_plus_adds": false,
+		"damage_progression": "basic_set",
+		"use_simple_metric_conversions": true,
+		"show_college_in_sheet_spells": true,
+		"show_difficulty": false,
+		"show_advantage_modifier_adj": false,
+		"show_equipment_modifier_adj": false,
+		"show_spell_adj": true,
+		"use_title_in_footer": false,
+		"page": {
+			"paper_size": "iso-a4",
+			"top_margin": "0.25 in",
+			"left_margin": "0.25 in",
+			"bottom_margin": "0.25 in",
+			"right_margin": "0.25 in",
+			"orientation": "portrait"
+		},
+		"block_layout": [
+			"reactions conditional_modifiers",
+			"melee",
+			"ranged",
+			"advantages skills",
+			"spells",
+			"equipment",
+			"other_equipment",
+			"notes"
+		],
+		"attributes": [
+			{
+				"id": "st",
+				"type": "integer",
+				"name": "ST",
+				"full_name": "Strength",
+				"attribute_base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 10
+			},
+			{
+				"id": "dx",
+				"type": "integer",
+				"name": "DX",
+				"full_name": "Dexterity",
+				"attribute_base": "10",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "iq",
+				"type": "integer",
+				"name": "IQ",
+				"full_name": "Intelligence",
+				"attribute_base": "10",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "ht",
+				"type": "integer",
+				"name": "HT",
+				"full_name": "Health",
+				"attribute_base": "10",
+				"cost_per_point": 10,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "will",
+				"type": "integer",
+				"name": "Will",
+				"full_name": "",
+				"attribute_base": "$iq",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "fright_check",
+				"type": "integer",
+				"name": "Fright Check",
+				"full_name": "",
+				"attribute_base": "$will",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "per",
+				"type": "integer",
+				"name": "Per",
+				"full_name": "Perception",
+				"attribute_base": "$iq",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "vision",
+				"type": "integer",
+				"name": "Vision",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "hearing",
+				"type": "integer",
+				"name": "Hearing",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "taste_smell",
+				"type": "integer",
+				"name": "Taste & Smell",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "touch",
+				"type": "integer",
+				"name": "Touch",
+				"full_name": "",
+				"attribute_base": "$per",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "basic_speed",
+				"type": "decimal",
+				"name": "Basic Speed",
+				"full_name": "",
+				"attribute_base": "($dx+$ht)/4",
+				"cost_per_point": 20,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "basic_move",
+				"type": "integer",
+				"name": "Basic Move",
+				"full_name": "",
+				"attribute_base": "floor($basic_speed)",
+				"cost_per_point": 5,
+				"cost_adj_percent_per_sm": 0
+			},
+			{
+				"id": "fp",
+				"type": "pool",
+				"name": "FP",
+				"full_name": "Fatigue Points",
+				"attribute_base": "$ht",
+				"cost_per_point": 3,
+				"cost_adj_percent_per_sm": 0,
+				"thresholds": [
+					{
+						"state": "Unconscious",
+						"explanation": "",
+						"multiplier": -1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Collapse",
+						"explanation": "<html><body>\n<b>Roll vs. Will<\/b> to do anything besides talk or rest; failure causes unconsciousness<br>\nEach FP you lose below 0 also causes 1 HP of injury<br>\nMove, Dodge and ST are halved (B426)\n<\/body><\/html>",
+						"multiplier": 0,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tired",
+						"explanation": "Move, Dodge and ST are halved (B426)",
+						"multiplier": 1,
+						"divisor": 3,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge",
+							"halve_st"
+						]
+					},
+					{
+						"state": "Tiring",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": -1,
+						"ops": [
+
+						]
+					},
+					{
+						"state": "Rested",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+
+						]
+					}
+				]
+			},
+			{
+				"id": "hp",
+				"type": "pool",
+				"name": "HP",
+				"full_name": "Hit Points",
+				"attribute_base": "$st",
+				"cost_per_point": 2,
+				"cost_adj_percent_per_sm": 10,
+				"thresholds": [
+					{
+						"state": "Dead",
+						"explanation": "",
+						"multiplier": -5,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #4",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> to avoid death<br>\n<b>Roll vs. HT-4<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": -4,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #3",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> to avoid death<br>\n<b>Roll vs. HT-3<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": -3,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #2",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> to avoid death<br>\n<b>Roll vs. HT-2<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": -2,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Dying #1",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> to avoid death<br>\n<b>Roll vs. HT-1<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": -1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Collapse",
+						"explanation": "<html><body>\n<b>Roll vs. HT<\/b> every second to avoid falling unconscious<br>\nMove and Dodge are halved (B419)\n<\/body><\/html>",
+						"multiplier": 0,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Reeling",
+						"explanation": "Move and Dodge are halved (B419)",
+						"multiplier": 1,
+						"divisor": 3,
+						"addition": 0,
+						"ops": [
+							"halve_move",
+							"halve_dodge"
+						]
+					},
+					{
+						"state": "Wounded",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": -1,
+						"ops": [
+
+						]
+					},
+					{
+						"state": "Healthy",
+						"explanation": "",
+						"multiplier": 1,
+						"divisor": 1,
+						"addition": 0,
+						"ops": [
+
+						]
+					}
+				]
+			}
+		],
+		"hit_locations": {
+			"id": "humanoid",
+			"name": "Humanoid",
+			"roll": "3d",
+			"locations": [
+				{
+					"id": "eye",
+					"choice_name": "Eyes",
+					"table_name": "Eyes",
+					"slots": 0,
+					"hit_penalty": -9,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Only impaling (imp), piercing (pi-, pi, pi+, pi++), and tight-beam burning (burn) attacks can target the eye – and only from the front or sides. Injury over HP÷10 blinds the eye. Otherwise, treat as skull, but without the extra DR!",
+					"calc": {
+						"roll_range": "-",
+						"dr": 0
+					}
+				},
+				{
+					"id": "skull",
+					"choice_name": "Skull",
+					"table_name": "Skull",
+					"slots": 2,
+					"hit_penalty": -7,
+					"dr_bonus": 2,
+					"description": "An attack that misses by 1 hits the torso instead. Wounding modifier is x4. Knockdown rolls are at -10. Critical hits use the Critical Head Blow Table (B556). Exception: These special effects do not apply to toxic (tox) damage.",
+					"calc": {
+						"roll_range": "3-4",
+						"dr": 6
+					}
+				},
+				{
+					"id": "face",
+					"choice_name": "Face",
+					"table_name": "Face",
+					"slots": 1,
+					"hit_penalty": -5,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Jaw, cheeks, nose, ears, etc. If the target has an open-faced helmet, ignore its DR. Knockdown rolls are at -5. Critical hits use the Critical Head Blow Table (B556). Corrosion (cor) damage gets a x1½ wounding modifier, and if it inflicts a major wound, it also blinds one eye (both eyes on damage over full HP). Random attacks from behind hit the skull instead.",
+					"calc": {
+						"roll_range": "5",
+						"dr": 4
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Right Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "6-7",
+						"dr": 4
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Right Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
+					"calc": {
+						"roll_range": "8",
+						"dr": 4
+					}
+				},
+				{
+					"id": "torso",
+					"choice_name": "Torso",
+					"table_name": "Torso",
+					"slots": 2,
+					"hit_penalty": 0,
+					"dr_bonus": 0,
+					"description": "",
+					"calc": {
+						"roll_range": "9-10",
+						"dr": 4
+					}
+				},
+				{
+					"id": "groin",
+					"choice_name": "Groin",
+					"table_name": "Groin",
+					"slots": 1,
+					"hit_penalty": -3,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Human males and the males of similar species suffer double shock from crushing (cr) damage, and get -5 to knockdown rolls. Otherwise, treat as a torso hit.",
+					"calc": {
+						"roll_range": "11",
+						"dr": 4
+					}
+				},
+				{
+					"id": "arm",
+					"choice_name": "Arm",
+					"table_name": "Left Arm",
+					"slots": 1,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost. If holding a shield, double the penalty to hit: -4 for shield arm instead of -2.",
+					"calc": {
+						"roll_range": "12",
+						"dr": 4
+					}
+				},
+				{
+					"id": "leg",
+					"choice_name": "Leg",
+					"table_name": "Left Leg",
+					"slots": 2,
+					"hit_penalty": -2,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ½ HP from one blow) cripples the limb. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "13-14",
+						"dr": 4
+					}
+				},
+				{
+					"id": "hand",
+					"choice_name": "Hand",
+					"table_name": "Hand",
+					"slots": 1,
+					"hit_penalty": -4,
+					"dr_bonus": 0,
+					"description": "If holding a shield, double the penalty to hit: -8 for shield hand instead of -4. Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "15",
+						"dr": 4
+					}
+				},
+				{
+					"id": "foot",
+					"choice_name": "Foot",
+					"table_name": "Foot",
+					"slots": 1,
+					"hit_penalty": -4,
+					"dr_bonus": 0,
+					"description": "Reduce the wounding multiplier of large piercing (pi+), huge piercing (pi++), and impaling (imp) damage to x1. Any major wound (loss of over ⅓ HP from one blow) cripples the extremity. Damage beyond that threshold is lost.",
+					"calc": {
+						"roll_range": "16",
+						"dr": 4
+					}
+				},
+				{
+					"id": "neck",
+					"choice_name": "Neck",
+					"table_name": "Neck",
+					"slots": 2,
+					"hit_penalty": -5,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Neck and throat. Increase the wounding multiplier of crushing (cr) and corrosion (cor) attacks to x1½, and that of cutting (cut) damage to x2. At the GM’s option, anyone killed by a cutting (cut) blow to the neck is decapitated!",
+					"calc": {
+						"roll_range": "17-18",
+						"dr": 4
+					}
+				},
+				{
+					"id": "vitals",
+					"choice_name": "Vitals",
+					"table_name": "Vitals",
+					"slots": 0,
+					"hit_penalty": -3,
+					"dr_bonus": 0,
+					"description": "An attack that misses by 1 hits the torso instead. Heart, lungs, kidneys, etc. Increase the wounding modifier for an impaling (imp) or any piercing (pi-, pi, pi+, pi++) attack to x3. Increase the wounding modifier for a tight-beam burning (burn) attack to x2. Other attacks cannot target the vitals.",
+					"calc": {
+						"roll_range": "-",
+						"dr": 4
+					}
+				}
+			]
+		}
+	},
+	"created_date": "Sep 22, 2021, 3:13 PM",
+	"modified_date": "Sep 23, 2021, 1:01 AM",
+	"profile": {
+		"player_name": "yanba",
+		"name": "Magus",
+		"eyes": "Glowing Yellow",
+		"handedness": "Left",
+		"height": "1.749996 m",
+		"weight": "76 kg",
+		"tech_level": "3",
+		"portrait": "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"
+	},
+	"attributes": [
+		{
+			"attr_id": "st",
+			"adj": 0,
+			"calc": {
+				"value": 12,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "dx",
+			"adj": 0,
+			"calc": {
+				"value": 10,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "iq",
+			"adj": 0,
+			"calc": {
+				"value": 10,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "ht",
+			"adj": 0,
+			"calc": {
+				"value": 12,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "will",
+			"adj": 0,
+			"calc": {
+				"value": 10,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "fright_check",
+			"adj": 0,
+			"calc": {
+				"value": 10,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "per",
+			"adj": 0,
+			"calc": {
+				"value": 10,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "vision",
+			"adj": 0,
+			"calc": {
+				"value": 10,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "hearing",
+			"adj": 0,
+			"calc": {
+				"value": 10,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "taste_smell",
+			"adj": 0,
+			"calc": {
+				"value": 10,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "touch",
+			"adj": 0,
+			"calc": {
+				"value": 10,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "basic_speed",
+			"adj": 0,
+			"calc": {
+				"value": 5.5,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "basic_move",
+			"adj": 0,
+			"calc": {
+				"value": 5,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "fp",
+			"adj": 0,
+			"damage": 0,
+			"calc": {
+				"value": 12,
+				"current": 12,
+				"points": 0
+			}
+		},
+		{
+			"attr_id": "hp",
+			"adj": 0,
+			"damage": 0,
+			"calc": {
+				"value": 12,
+				"current": 12,
+				"points": 0
+			}
+		}
+	],
+	"total_points": 250,
+	"advantages": [
+		{
+			"type": "advantage",
+			"id": "61f987a8-6ff6-4f5e-b5e6-6bfdb66c23cf",
+			"name": "Natural Attacks",
+			"physical": true,
+			"weapons": [
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Bite",
+					"reach": "C",
+					"parry": "No",
+					"block": "No",
+					"calc": {
+						"level": 10,
+						"parry": "No",
+						"block": "No",
+						"damage": "1d-2 cr"
+					},
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr",
+						"base": "-1"
+					},
+					"usage": "Punch",
+					"reach": "C",
+					"parry": "0",
+					"calc": {
+						"level": 10,
+						"parry": "8",
+						"block": "",
+						"damage": "1d-2 cr"
+					},
+					"defaults": [
+						{
+							"type": "dx"
+						},
+						{
+							"type": "skill",
+							"name": "Boxing"
+						},
+						{
+							"type": "skill",
+							"name": "Brawling"
+						},
+						{
+							"type": "skill",
+							"name": "Karate"
+						}
+					]
+				},
+				{
+					"type": "melee_weapon",
+					"damage": {
+						"type": "cr",
+						"st": "thr"
+					},
+					"usage": "Kick",
+					"reach": "C,1",
+					"parry": "No",
+					"calc": {
+						"level": 8,
+						"parry": "No",
+						"block": "",
+						"damage": "1d-1 cr"
+					},
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Brawling",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Karate",
+							"modifier": -2
+						}
+					]
+				}
+			],
+			"reference": "B271",
+			"calc": {
+				"points": 0
+			}
+		},
+		{
+			"type": "advantage_container",
+			"id": "1bafa676-0521-45e1-aadc-8f993756f6b6",
+			"container_type": "race",
+			"name": "Mechanoid",
+			"calc": {
+				"points": 25
+			},
+			"open": false,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "86a1f6f4-a958-4713-98e3-0b49c935873a",
+					"name": "Damage Resistance",
+					"physical": true,
+					"exotic": true,
+					"levels": "4",
+					"points_per_level": 5,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "78c54414-f36b-4998-8bb4-98df09ac0baa",
+							"disabled": true,
+							"name": "Force Field",
+							"reference": "B47",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "d4b5f633-3fe2-40c0-8556-d5bfeaddb475",
+							"disabled": true,
+							"name": "Hardened",
+							"reference": "B47",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total",
+							"levels": 1
+						},
+						{
+							"type": "modifier",
+							"id": "a7741095-3d70-4db6-b5ed-9f651f921001",
+							"disabled": true,
+							"name": "Absorption",
+							"reference": "B46",
+							"cost_type": "percentage",
+							"cost": 80,
+							"affects": "total",
+							"notes": "Enhances @Trait@"
+						},
+						{
+							"type": "modifier",
+							"id": "824707a8-517e-4dfd-9d0c-a6b415a941ea",
+							"disabled": true,
+							"name": "Absorption",
+							"reference": "B46",
+							"cost_type": "percentage",
+							"cost": 80,
+							"affects": "total",
+							"notes": "Healing only"
+						},
+						{
+							"type": "modifier",
+							"id": "5a30cef4-6845-437c-9c1e-e5ca0afdaa6a",
+							"disabled": true,
+							"name": "Absorption",
+							"reference": "B46",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total",
+							"notes": "Enhances any trait"
+						},
+						{
+							"type": "modifier",
+							"id": "b3eeb7e8-de83-4e1c-84e5-8742b1e4a1bd",
+							"disabled": true,
+							"name": "Reflection",
+							"reference": "B47",
+							"cost_type": "percentage",
+							"cost": 100,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "36a02ccd-faaa-47ff-9fb0-730eab159632",
+							"name": "Bane",
+							"reference": "H14",
+							"cost_type": "points",
+							"cost": -1,
+							"affects": "total",
+							"notes": "Adamantite"
+						},
+						{
+							"type": "modifier",
+							"id": "63d47b52-3bad-4d08-b7f3-f25296e7055d",
+							"disabled": true,
+							"name": "Bane",
+							"reference": "H14",
+							"cost_type": "percentage",
+							"cost": -5,
+							"affects": "total",
+							"notes": "@Occasional@"
+						},
+						{
+							"type": "modifier",
+							"id": "1dd16c05-ae52-49ae-a57a-21f530f5d349",
+							"disabled": true,
+							"name": "Bane",
+							"reference": "H14",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"notes": "@Common@"
+						},
+						{
+							"type": "modifier",
+							"id": "0231f922-c629-4774-adec-ac3f1748348c",
+							"disabled": true,
+							"name": "Bane",
+							"reference": "H14",
+							"cost_type": "percentage",
+							"cost": -15,
+							"affects": "total",
+							"notes": "@Very Common@"
+						},
+						{
+							"type": "modifier",
+							"id": "fe7b41d1-0f37-47c9-8c26-0e9393cde17a",
+							"disabled": true,
+							"name": "Directional",
+							"reference": "B47",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Front"
+						},
+						{
+							"type": "modifier",
+							"id": "f926a46a-6a36-469f-a585-3bd7b743da34",
+							"disabled": true,
+							"name": "Flexible",
+							"reference": "B47",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "58631b51-14ff-4239-b335-b029dda90f03",
+							"disabled": true,
+							"name": "Limited",
+							"reference": "B46",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "@Very Common Attack Form@"
+						},
+						{
+							"type": "modifier",
+							"id": "2f79b835-c689-4b67-854a-b36a480e8eb0",
+							"disabled": true,
+							"name": "Semi-Ablative",
+							"reference": "B47",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "787904c1-340f-49ac-bcd6-c01cd9a190b7",
+							"name": "Can't wear armor",
+							"reference": "B47",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "a4f3341f-0a5b-48ef-afaf-eab33e56af03",
+							"disabled": true,
+							"name": "Directional",
+							"reference": "B47",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "@Direction: Back, Right, Left, Top or Underside@"
+						},
+						{
+							"type": "modifier",
+							"id": "9ace574c-1f9c-4a27-a611-8ea3ea4d027d",
+							"disabled": true,
+							"name": "Limited",
+							"reference": "B46",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "@Common Attack Form@"
+						},
+						{
+							"type": "modifier",
+							"id": "e8a49ea9-16ce-4b02-8ce0-9ef8e83f6c1d",
+							"disabled": true,
+							"name": "Tough Skin",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "Effects that just require skin contact or a scratch ignore this DR"
+						},
+						{
+							"type": "modifier",
+							"id": "8b633aef-db7e-4c9d-bd4e-4cc53cbd2884",
+							"disabled": true,
+							"name": "Limited",
+							"reference": "B46",
+							"cost_type": "percentage",
+							"cost": -60,
+							"affects": "total",
+							"notes": "@Occasional Attack Form@"
+						},
+						{
+							"type": "modifier",
+							"id": "964c87e5-3e79-49ed-9e3d-e9ebcf0323bb",
+							"disabled": true,
+							"name": "Ablative",
+							"reference": "B47",
+							"cost_type": "percentage",
+							"cost": -80,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "49dcf3e4-948d-4276-8184-23e0542e4db3",
+							"disabled": true,
+							"name": "Limited",
+							"reference": "B46",
+							"cost_type": "percentage",
+							"cost": -80,
+							"affects": "total",
+							"notes": "@Rare Attack Form@"
+						},
+						{
+							"type": "modifier",
+							"id": "9630c23e-60ac-45ad-a1bc-ff0a86e0db79",
+							"disabled": true,
+							"name": "Laminate",
+							"reference": "RSWL18",
+							"cost_type": "percentage",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "2ddce7cd-ca04-48b2-96cf-df487c955cdb",
+							"disabled": true,
+							"name": "Malediction-Proof",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": 50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "5456cc7a-abd7-4ffd-b972-937c756e7f5c",
+							"disabled": true,
+							"name": "Maledictions Only",
+							"reference": "PSI14",
+							"cost_type": "percentage",
+							"cost": 0,
+							"affects": "total"
+						}
+					],
+					"reference": "B47",
+					"calc": {
+						"points": 12
+					},
+					"features": [
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "skull"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "face"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "neck"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "torso"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "vitals"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "groin"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "arm"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "hand"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "leg"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "foot"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "tail"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "wing"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "fin"
+						},
+						{
+							"type": "dr_bonus",
+							"amount": 1,
+							"per_level": true,
+							"location": "brain"
+						}
+					],
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "30f02499-d2b6-47db-b8d4-64c6c1e91149",
+					"name": "Language: Common",
+					"mental": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "468af4a9-a889-4181-aff1-361be08fcba8",
+							"name": "Native",
+							"reference": "B23",
+							"cost_type": "points",
+							"cost": -6,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "ba62411b-75d5-4d03-a796-a3f8428ea003",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"id": "82215637-abee-45f0-97fb-7ffdc9d9523c",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"id": "4c5d1e61-729b-4fdd-938e-7a92e001d527",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"id": "8dc043d6-0ff4-49d4-9e02-585ccc2705e7",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						},
+						{
+							"type": "modifier",
+							"id": "fb9a174e-47f5-40b9-b202-f440a723440c",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"id": "4920d238-083f-4c27-a86d-417b4ef3d321",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"id": "8be3af58-902d-48f3-be96-bd1f72bef8ef",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"id": "115edd7d-4344-4c90-904b-e5ca8be76fda",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						}
+					],
+					"reference": "B24",
+					"calc": {
+						"points": -6
+					},
+					"categories": [
+						"Advantage",
+						"Language"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "cc6ab1d5-ea2a-4459-8ee3-57f345fd12f5",
+					"name": "Dark Vision",
+					"physical": true,
+					"exotic": true,
+					"base_points": 25,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "7d00542f-2d71-4b85-b318-2fa1cdc7ce7b",
+							"disabled": true,
+							"name": "Can see colors in the dark",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "4610a01e-7d62-4487-9216-d133ce1266ad",
+							"disabled": true,
+							"name": "Hypersensory",
+							"reference": "P46",
+							"cost_type": "percentage",
+							"cost": 40,
+							"affects": "total"
+						}
+					],
+					"reference": "B47",
+					"calc": {
+						"points": 25
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "047997c9-561b-45a1-bd98-868343bdeb94",
+					"name": "Dependency (Mana)",
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "735c4126-4860-4c7b-a92b-7082d84c2294",
+							"disabled": true,
+							"name": "Rarity: Rare",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -30,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "e85a2863-e6c6-4af4-9b95-8a50f414b475",
+							"disabled": true,
+							"name": "Rarity: Occasional",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "a23731be-5232-4379-933c-14743002320a",
+							"name": "Rarity: Common",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "01236434-6c2f-452a-b998-e0c6277b724e",
+							"disabled": true,
+							"name": "Rarity: Very Common",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "b3e3ae3b-c14f-4df0-bcf1-3c6f4f81a9be",
+							"disabled": true,
+							"name": "Illegal",
+							"reference": "B130",
+							"cost_type": "points",
+							"cost": -5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "9ecd1009-a70d-44fa-97c1-2dc153bf1974",
+							"name": "Frequency: Constantly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 5,
+							"notes": "Lose 1 HP per minute without it"
+						},
+						{
+							"type": "modifier",
+							"id": "581316ce-ba17-4b7f-ba63-ed00ec9cdd9b",
+							"disabled": true,
+							"name": "Frequency: Hourly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 4,
+							"notes": "Lose 1 HP per 10 minutes after missing a hourly dose"
+						},
+						{
+							"type": "modifier",
+							"id": "c6be4b89-2764-4212-83b3-c87b2b31f045",
+							"disabled": true,
+							"name": "Frequency: Daily",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 3,
+							"notes": "Lose 1 HP per hour after missing a daily dose"
+						},
+						{
+							"type": "modifier",
+							"id": "1f6a234e-69e6-466b-9f78-6aa2a54c3446",
+							"disabled": true,
+							"name": "Frequency: Weekly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 2,
+							"notes": "Lose 1 HP per six hours after missing a weekly dose"
+						},
+						{
+							"type": "modifier",
+							"id": "686623a0-6d2b-4500-9778-a8fbcff8dc27",
+							"disabled": true,
+							"name": "Frequency: Monthly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 1,
+							"notes": "Lose 1 HP per day after missing a monthly dose"
+						},
+						{
+							"type": "modifier",
+							"id": "46b20dc6-ecc3-46e1-86ae-f5d276562a0b",
+							"disabled": true,
+							"name": "Frequency: Seasonally",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 0.33333,
+							"notes": "Lose 1 HP per 3 days after missing a seasonal dose"
+						},
+						{
+							"type": "modifier",
+							"id": "0347e376-3f05-4b21-a578-1095f99c7ab3",
+							"disabled": true,
+							"name": "Frequency: Yearly",
+							"reference": "B130",
+							"cost_type": "multiplier",
+							"cost": 0.1,
+							"notes": "Lose 1 HP per 2 weeks after missing a yearly dose"
+						},
+						{
+							"type": "modifier",
+							"id": "a4e54dba-1b67-44b2-b288-e4b48abbbfe8",
+							"disabled": true,
+							"name": "Aging",
+							"reference": "B130",
+							"cost_type": "percentage",
+							"cost": 30,
+							"affects": "total",
+							"notes": "Age 2 years for each HP lost due to this dependency"
+						}
+					],
+					"reference": "B130",
+					"calc": {
+						"points": -50
+					},
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "fe33adcd-cbaf-45c3-89e8-f59bb2a7f91f",
+					"name": "Doesn't Breathe",
+					"physical": true,
+					"exotic": true,
+					"base_points": 20,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "65e007fc-e6b0-460c-a5d2-96265cb2b1c5",
+							"disabled": true,
+							"name": "Gills",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "a26679f1-5f45-4710-afe0-e40733184fdd",
+							"disabled": true,
+							"name": "Gills",
+							"reference": "B49",
+							"cost_type": "points",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Suffocates in air"
+						},
+						{
+							"type": "modifier",
+							"id": "8bfdcaae-a597-4c62-8118-d3efc7adba44",
+							"disabled": true,
+							"name": "Oxygen Absorption",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -25,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "cb64b2bd-fca0-4ee8-93cd-a8069c6f13d5",
+							"disabled": true,
+							"name": "Oxygen Storage",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total",
+							"notes": "Can hold breath 25 times as long as normal"
+						},
+						{
+							"type": "modifier",
+							"id": "ebf382ca-c16d-4295-9175-5b7d8a90d65e",
+							"disabled": true,
+							"name": "Oxygen Storage",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total",
+							"notes": "Can hold breath 50 times as long as normal"
+						},
+						{
+							"type": "modifier",
+							"id": "2c50a348-67df-43c7-82a9-82701b29365c",
+							"disabled": true,
+							"name": "Oxygen Storage",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -30,
+							"affects": "total",
+							"notes": "Can hold breath 100 times as long as normal"
+						},
+						{
+							"type": "modifier",
+							"id": "fd651110-2ac0-4008-9bf8-8b4919739b93",
+							"disabled": true,
+							"name": "Oxygen Storage",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -20,
+							"affects": "total",
+							"notes": "Can hold breath 200 times as long as normal"
+						},
+						{
+							"type": "modifier",
+							"id": "c07b6db7-6414-4777-a8db-5dd6be6eb414",
+							"disabled": true,
+							"name": "Oxygen Storage",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"notes": "Can hold breath 300 times as long as normal"
+						},
+						{
+							"type": "modifier",
+							"id": "971adaab-932e-4f28-ad97-da6bbf9f7940",
+							"disabled": true,
+							"name": "Oxygen Combustion",
+							"reference": "B49",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						}
+					],
+					"reference": "B49",
+					"calc": {
+						"points": 20
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "8954b1c1-32b8-404f-818b-4603210d2b5a",
+					"name": "Doesn't Eat or Drink",
+					"physical": true,
+					"exotic": true,
+					"base_points": 10,
+					"reference": "B50",
+					"calc": {
+						"points": 10
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "8d0525b5-ec26-4598-8589-09f0924ee74f",
+					"name": "Doesn't Sleep",
+					"physical": true,
+					"exotic": true,
+					"base_points": 20,
+					"reference": "B50",
+					"calc": {
+						"points": 20
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "aa5e639c-0131-4638-b57f-60634eb3e5b4",
+					"name": "Hidebound",
+					"mental": true,
+					"base_points": -5,
+					"reference": "B138",
+					"calc": {
+						"points": -5
+					},
+					"notes": "-2 penalty on any task that requires creativity or invention, including most rolls against Artist skill, all Engineer rolls for new inventions, and all skill rolls made to use the Gadgeteer advantage.",
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "a7c6e732-ff65-4d61-bcdf-a45fa5b22a5b",
+					"name": "High Pain Threshold",
+					"physical": true,
+					"base_points": 10,
+					"reference": "B59",
+					"calc": {
+						"points": 10
+					},
+					"notes": "Never suffer shock penalties when injured; +3 on all HT rolls to avoid knockdown and stunning; +3 to resist torture",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "1ef1ed07-e2e2-4bb7-9c15-95b5d40c711d",
+					"name": "Increased Health",
+					"physical": true,
+					"levels": "2",
+					"points_per_level": 10,
+					"reference": "B14",
+					"calc": {
+						"points": 20
+					},
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"per_level": true,
+							"attribute": "ht"
+						}
+					],
+					"categories": [
+						"Advantage",
+						"Attribute"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "d430df0a-9900-492f-a6ac-bdea1b2bc76a",
+					"name": "Increased Strength",
+					"physical": true,
+					"levels": "2",
+					"points_per_level": 10,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "9357160a-9373-413a-8af3-daa90ed98368",
+							"disabled": true,
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "92673f35-3c35-47e7-9c0c-f3a59827b27b",
+							"disabled": true,
+							"name": "Size",
+							"reference": "B15",
+							"cost_type": "percentage",
+							"cost": -10,
+							"affects": "total",
+							"levels": 1
+						},
+						{
+							"type": "modifier",
+							"id": "f87fdefb-99e4-4a37-bbf0-c834c251b3d1",
+							"disabled": true,
+							"name": "Super-Effort",
+							"reference": "SU24",
+							"cost_type": "percentage",
+							"cost": 300,
+							"affects": "total"
+						}
+					],
+					"reference": "B14",
+					"calc": {
+						"points": 20
+					},
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"per_level": true,
+							"attribute": "st"
+						}
+					],
+					"categories": [
+						"Advantage",
+						"Attribute"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "d9dcf4e7-7c6b-4d0b-b2b6-8285b139cb45",
+					"name": "Incurious",
+					"mental": true,
+					"base_points": -5,
+					"cr": 6,
+					"reference": "B140",
+					"calc": {
+						"points": -10
+					},
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -1,
+							"situation": "to new things"
+						}
+					],
+					"notes": "Make a self-control roll when confronted with something strange. If you fail, you ignore it!",
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "170407f1-a7fb-4a48-9dff-cc18d1be750d",
+					"name": "Injury Tolerance",
+					"physical": true,
+					"exotic": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "01e01559-774b-4d49-9e28-435a1e2831b2",
+							"disabled": true,
+							"name": "Diffuse",
+							"reference": "B60",
+							"cost_type": "points",
+							"cost": 100,
+							"affects": "total",
+							"notes": "Immune to crippling injuries. Brain, Vitals and Groin cannot be targeted. Most foes cannot slam or grapple you (GM's decision). Do not bleed. Unaffected by blood-borne toxins. Immune to attacks that rely on cutting off blood to part of your body. Impaling and piercing attacks of any size never do more than 1 HP of injury, regardless of penetrating damage. Other attacks never do more than 2 HP of injury. Exception: Area-effect, cone, and explosion attacks cause normal injury"
+						},
+						{
+							"type": "modifier",
+							"id": "f99209f6-97c3-4bd8-9a35-12053a031dba",
+							"disabled": true,
+							"name": "Homogenous",
+							"reference": "B60",
+							"cost_type": "points",
+							"cost": 40,
+							"affects": "total",
+							"notes": "Altered wound modifiers: imp & pi++ are x1/2, pi+ is x1/3, pi is x1/5, pi- is x1/10"
+						},
+						{
+							"type": "modifier",
+							"id": "4506a819-237a-4d57-b0b9-79bed8650bdf",
+							"name": "No Blood",
+							"reference": "B61",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "Do not bleed, unaffected by blood-borne toxins, immune to attacks that rely on cutting off blood to part of your body"
+						},
+						{
+							"type": "modifier",
+							"id": "e18d038a-67ce-43b2-9900-87806d52bfb2",
+							"disabled": true,
+							"name": "No Brain",
+							"reference": "B61",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "Brain cannot be targeted. Blows to the skull or eye are treated like blows to the face, except that eye injury can still cripple the eye"
+						},
+						{
+							"type": "modifier",
+							"id": "f69fec1c-3fd6-44e5-b2eb-9ed7fed729d3",
+							"disabled": true,
+							"name": "No Eyes",
+							"reference": "B61",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "Eyes may not be targeted. Immune to blinding attacks"
+						},
+						{
+							"type": "modifier",
+							"id": "52c33cde-a854-4586-a927-edb3fc8a91b4",
+							"disabled": true,
+							"name": "No Head",
+							"reference": "B61",
+							"cost_type": "points",
+							"cost": 7,
+							"affects": "total",
+							"notes": "Skull, Brain and Face cannot be targeted"
+						},
+						{
+							"type": "modifier",
+							"id": "38c190c6-789c-4036-82bb-8e0068650b09",
+							"disabled": true,
+							"name": "No Neck",
+							"reference": "B61",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "Neck may not be targeted and cannot be decapitated, choked or strangled"
+						},
+						{
+							"type": "modifier",
+							"id": "115684fd-64c3-4a69-95a4-3f308895665e",
+							"disabled": true,
+							"name": "No Vitals",
+							"reference": "B61",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total",
+							"notes": "Attacks to the Vitals or Groin are treated as attacks to the Torso"
+						},
+						{
+							"type": "modifier",
+							"id": "6803681d-86c3-49e0-bb3a-1394530db49f",
+							"name": "Unliving",
+							"reference": "B61",
+							"cost_type": "points",
+							"cost": 20,
+							"affects": "total",
+							"notes": "Altered wound modifiers: imp & pi++ are x1, pi+ is x1/2, pi is x1/3, pi- is x1/5"
+						}
+					],
+					"reference": "B60",
+					"calc": {
+						"points": 25
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "9cd22225-5996-4494-90d2-30b4f1094b34",
+					"name": "Killjoy",
+					"physical": true,
+					"base_points": -15,
+					"reference": "B140",
+					"calc": {
+						"points": -15
+					},
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "carousing"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "contains",
+								"qualifier": "connoisseur"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "erotic art"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "gambling"
+							}
+						},
+						{
+							"type": "reaction_bonus",
+							"amount": -1,
+							"situation": "(up to -3, at GM's discretion) from others in any situation where your lack of appreciation becomes obvious (GM’s decision)"
+						}
+					],
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "6735963d-4a34-4a22-83c0-17782bbebc73",
+					"name": "Low Empathy",
+					"mental": true,
+					"base_points": -20,
+					"reference": "B142",
+					"calc": {
+						"points": -20
+					},
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "advantage_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "oblivious"
+								}
+							},
+							{
+								"type": "advantage_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "callous"
+								}
+							},
+							{
+								"type": "advantage_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "empathy"
+								}
+							}
+						]
+					},
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "acting"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "carousing"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "criminology"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "detect lies"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "diplomacy"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "enthrallment"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "fast-talk"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "interrogation"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "leadership"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "merchant"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "politics"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "contains",
+								"qualifier": "psychology"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "contains",
+								"qualifier": "savoir-faire"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "sex appeal"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "sociology"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -3,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "streetwise"
+							}
+						}
+					],
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "5de0ed67-802b-4b03-ba5c-fd80f6ff6b68",
+					"name": "Mana Powered",
+					"exotic": true,
+					"supernatural": true,
+					"base_points": -20,
+					"reference": "B134",
+					"calc": {
+						"points": -20
+					},
+					"notes": "Like electrical, but affected by Mana Surge",
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "37fd8294-0096-48a4-afd6-2ff65b493cf7",
+					"name": "No fatigue points, Don't spend fatigue points",
+					"physical": true,
+					"reference": "B263",
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "d867eec6-573e-4a47-beb4-3388e65c4058",
+					"name": "No Sense of Humor",
+					"physical": true,
+					"base_points": -10,
+					"reference": "B146",
+					"calc": {
+						"points": -10
+					},
+					"features": [
+						{
+							"type": "reaction_bonus",
+							"amount": -2,
+							"situation": "from others in any situation where No Sense of Humor becomes evident"
+						}
+					],
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "f7c2af90-c85c-422b-96d5-4b319bfceb30",
+					"round_down": true,
+					"name": "Resistant",
+					"physical": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "51a58be9-247c-4ffe-8e47-d0d6973544b7",
+							"name": "Metabolic Hazards",
+							"reference": "B80",
+							"cost_type": "points",
+							"cost": 30,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "5068ac3c-8f24-4041-9ba2-d371c697f790",
+							"disabled": true,
+							"name": "@Common: Poison, Sickness, etc.@",
+							"reference": "B81",
+							"cost_type": "points",
+							"cost": 15,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "9cf4f285-83b6-4732-b2f0-3a716b0f6802",
+							"disabled": true,
+							"name": "@Occasional: Disease, Ingested Poison, etc.@",
+							"reference": "B81",
+							"cost_type": "points",
+							"cost": 10,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "ab5d3fe9-2e74-4f49-8544-d3cf3931d065",
+							"disabled": true,
+							"name": "@Rare: Acceleration, Altitude Sickness, Bends, Seasickness, Space Sickness, Nanomachines, etc.@",
+							"reference": "B81",
+							"cost_type": "points",
+							"cost": 5,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "63556f25-74b9-499a-b602-a87e732a64f8",
+							"name": "Immunity",
+							"reference": "B81",
+							"cost_type": "multiplier",
+							"cost": 1
+						},
+						{
+							"type": "modifier",
+							"id": "31659b78-4e33-4fcd-8cf2-deeb1c8726fd",
+							"disabled": true,
+							"name": "+8 to all HT rolls to resist",
+							"reference": "B81",
+							"cost_type": "multiplier",
+							"cost": 0.5
+						},
+						{
+							"type": "modifier",
+							"id": "f06b9484-1776-4367-9bf4-c1df6bfca93b",
+							"disabled": true,
+							"name": "+3 to all HT rolls to resist",
+							"reference": "B81",
+							"cost_type": "multiplier",
+							"cost": 0.33
+						}
+					],
+					"reference": "B81",
+					"calc": {
+						"points": 30
+					},
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "d1e15490-dd45-499a-91b8-44973ece8d3b",
+					"name": "Sexless",
+					"physical": true,
+					"base_points": -1,
+					"calc": {
+						"points": -1
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "54246a12-e7eb-4a17-a8b7-257cc5e6d93a",
+					"name": "Unhealing (Total)",
+					"physical": true,
+					"exotic": true,
+					"base_points": -30,
+					"reference": "B160",
+					"calc": {
+						"points": -30
+					},
+					"categories": [
+						"Disadvantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "8f42a0fa-f022-4b72-84af-b5939ecea797",
+					"name": "Wears out instead of aging",
+					"physical": true,
+					"reference": "B263",
+					"calc": {
+						"points": 0
+					}
+				}
+			]
+		}
+	]
+}

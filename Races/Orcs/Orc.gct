@@ -15,247 +15,6 @@
 			"children": [
 				{
 					"type": "advantage",
-					"id": "b3b3a3cf-836b-4605-b192-bcd6e8b69412",
-					"name": "Bloodlust",
-					"mental": true,
-					"base_points": -10,
-					"cr": 9,
-					"reference": "B125",
-					"calc": {
-						"points": -15
-					},
-					"notes": "You must make a self-control roll whenever you need to accept a surrender, evade a sentry, take a prisoner, etc.",
-					"categories": [
-						"Disadvantage"
-					]
-				},
-				{
-					"type": "advantage",
-					"id": "5d7744a2-6829-41ca-86dc-81396dc1180f",
-					"name": "Language: Orcish",
-					"mental": true,
-					"modifiers": [
-						{
-							"type": "modifier",
-							"id": "39a8d932-f60b-4a91-9292-61451b842203",
-							"name": "Native",
-							"reference": "B23",
-							"cost_type": "points",
-							"cost": -6,
-							"affects": "total"
-						},
-						{
-							"type": "modifier",
-							"id": "cfd235a8-8c5d-4ac0-b99b-c9bfef3edc7c",
-							"disabled": true,
-							"name": "Spoken",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 0,
-							"affects": "total",
-							"notes": "None"
-						},
-						{
-							"type": "modifier",
-							"id": "723345ec-e086-4d64-859f-5b69104763a5",
-							"disabled": true,
-							"name": "Spoken",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 1,
-							"affects": "total",
-							"notes": "Broken"
-						},
-						{
-							"type": "modifier",
-							"id": "f57bd115-999b-438d-a8e8-fa1cb9aa222d",
-							"disabled": true,
-							"name": "Spoken",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 2,
-							"affects": "total",
-							"notes": "Accented"
-						},
-						{
-							"type": "modifier",
-							"id": "074b1054-fd16-4c82-89f3-4bd2c51baf1c",
-							"disabled": true,
-							"name": "Spoken",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 3,
-							"affects": "total",
-							"notes": "Native"
-						},
-						{
-							"type": "modifier",
-							"id": "465c50c9-7078-4526-a6c6-e656d261ca08",
-							"disabled": true,
-							"name": "Written",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 0,
-							"affects": "total",
-							"notes": "None"
-						},
-						{
-							"type": "modifier",
-							"id": "9eaac132-1680-49eb-8246-abbf045bddaf",
-							"disabled": true,
-							"name": "Written",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 1,
-							"affects": "total",
-							"notes": "Broken"
-						},
-						{
-							"type": "modifier",
-							"id": "0f07ed50-c7fa-4a50-a932-aeecbca800a5",
-							"disabled": true,
-							"name": "Written",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 2,
-							"affects": "total",
-							"notes": "Accented"
-						},
-						{
-							"type": "modifier",
-							"id": "a592faa3-9043-4d14-9972-fef8ec52e595",
-							"disabled": true,
-							"name": "Written",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 3,
-							"affects": "total",
-							"notes": "Native"
-						}
-					],
-					"reference": "B24",
-					"calc": {
-						"points": -6
-					},
-					"categories": [
-						"Advantage",
-						"Language"
-					]
-				},
-				{
-					"type": "advantage",
-					"id": "28836202-4a3b-4e64-b8d1-62f639ee2bb9",
-					"name": "Language: @Language@",
-					"mental": true,
-					"modifiers": [
-						{
-							"type": "modifier",
-							"id": "6d361d81-c4b4-48d1-a7c5-2f5df0297ac3",
-							"disabled": true,
-							"name": "Native",
-							"reference": "B23",
-							"cost_type": "points",
-							"cost": -6,
-							"affects": "total"
-						},
-						{
-							"type": "modifier",
-							"id": "e08f47cd-d4e5-4fb1-849f-a2c2ac7f5a54",
-							"disabled": true,
-							"name": "Spoken",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 0,
-							"affects": "total",
-							"notes": "None"
-						},
-						{
-							"type": "modifier",
-							"id": "bfba7e8f-5f6e-443b-8cc9-8effc07fa0c1",
-							"disabled": true,
-							"name": "Spoken",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 1,
-							"affects": "total",
-							"notes": "Broken"
-						},
-						{
-							"type": "modifier",
-							"id": "faf2b4de-a9a1-48cb-b10c-c79e1aa49706",
-							"name": "Spoken",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 2,
-							"affects": "total",
-							"notes": "Accented"
-						},
-						{
-							"type": "modifier",
-							"id": "9a88eb20-8bb9-44e8-8ffb-2294347a2a0e",
-							"disabled": true,
-							"name": "Spoken",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 3,
-							"affects": "total",
-							"notes": "Native"
-						},
-						{
-							"type": "modifier",
-							"id": "f4cf43b6-eadb-4a5f-8cd1-211b68399503",
-							"disabled": true,
-							"name": "Written",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 0,
-							"affects": "total",
-							"notes": "None"
-						},
-						{
-							"type": "modifier",
-							"id": "7617404b-dea2-4449-b821-4d5d85b4afdd",
-							"disabled": true,
-							"name": "Written",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 1,
-							"affects": "total",
-							"notes": "Broken"
-						},
-						{
-							"type": "modifier",
-							"id": "ef1d62cb-efbb-41cb-bc2d-4706a154d4a3",
-							"name": "Written",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 2,
-							"affects": "total",
-							"notes": "Accented"
-						},
-						{
-							"type": "modifier",
-							"id": "57bfccee-2f60-4f21-a7db-67e5ff0e56df",
-							"disabled": true,
-							"name": "Written",
-							"reference": "B24",
-							"cost_type": "points",
-							"cost": 3,
-							"affects": "total",
-							"notes": "Native"
-						}
-					],
-					"reference": "B24",
-					"calc": {
-						"points": 4
-					},
-					"categories": [
-						"Advantage",
-						"Language"
-					]
-				},
-				{
-					"type": "advantage",
 					"id": "ceac6500-9614-41ba-a36e-81258838e401",
 					"name": "Acute Hearing",
 					"physical": true,
@@ -433,6 +192,22 @@
 					},
 					"categories": [
 						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "b3b3a3cf-836b-4605-b192-bcd6e8b69412",
+					"name": "Bloodlust",
+					"mental": true,
+					"base_points": -10,
+					"cr": 9,
+					"reference": "B125",
+					"calc": {
+						"points": -15
+					},
+					"notes": "You must make a self-control roll whenever you need to accept a surrender, evade a sentry, take a prisoner, etc.",
+					"categories": [
+						"Disadvantage"
 					]
 				},
 				{
@@ -683,6 +458,231 @@
 					"categories": [
 						"Advantage",
 						"Attribute"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "28836202-4a3b-4e64-b8d1-62f639ee2bb9",
+					"name": "Language: @Language@",
+					"mental": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "6d361d81-c4b4-48d1-a7c5-2f5df0297ac3",
+							"disabled": true,
+							"name": "Native",
+							"reference": "B23",
+							"cost_type": "points",
+							"cost": -6,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "e08f47cd-d4e5-4fb1-849f-a2c2ac7f5a54",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"id": "bfba7e8f-5f6e-443b-8cc9-8effc07fa0c1",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"id": "faf2b4de-a9a1-48cb-b10c-c79e1aa49706",
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"id": "9a88eb20-8bb9-44e8-8ffb-2294347a2a0e",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						},
+						{
+							"type": "modifier",
+							"id": "f4cf43b6-eadb-4a5f-8cd1-211b68399503",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"id": "7617404b-dea2-4449-b821-4d5d85b4afdd",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"id": "ef1d62cb-efbb-41cb-bc2d-4706a154d4a3",
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"id": "57bfccee-2f60-4f21-a7db-67e5ff0e56df",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						}
+					],
+					"reference": "B24",
+					"calc": {
+						"points": 4
+					},
+					"categories": [
+						"Advantage",
+						"Language"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "5d7744a2-6829-41ca-86dc-81396dc1180f",
+					"name": "Language: Orcish",
+					"mental": true,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "39a8d932-f60b-4a91-9292-61451b842203",
+							"name": "Native",
+							"reference": "B23",
+							"cost_type": "points",
+							"cost": -6,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "cfd235a8-8c5d-4ac0-b99b-c9bfef3edc7c",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"id": "723345ec-e086-4d64-859f-5b69104763a5",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"id": "f57bd115-999b-438d-a8e8-fa1cb9aa222d",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"id": "074b1054-fd16-4c82-89f3-4bd2c51baf1c",
+							"disabled": true,
+							"name": "Spoken",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						},
+						{
+							"type": "modifier",
+							"id": "465c50c9-7078-4526-a6c6-e656d261ca08",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 0,
+							"affects": "total",
+							"notes": "None"
+						},
+						{
+							"type": "modifier",
+							"id": "9eaac132-1680-49eb-8246-abbf045bddaf",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 1,
+							"affects": "total",
+							"notes": "Broken"
+						},
+						{
+							"type": "modifier",
+							"id": "0f07ed50-c7fa-4a50-a932-aeecbca800a5",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 2,
+							"affects": "total",
+							"notes": "Accented"
+						},
+						{
+							"type": "modifier",
+							"id": "a592faa3-9043-4d14-9972-fef8ec52e595",
+							"disabled": true,
+							"name": "Written",
+							"reference": "B24",
+							"cost_type": "points",
+							"cost": 3,
+							"affects": "total",
+							"notes": "Native"
+						}
+					],
+					"reference": "B24",
+					"calc": {
+						"points": -6
+					},
+					"categories": [
+						"Advantage",
+						"Language"
 					]
 				},
 				{

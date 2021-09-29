@@ -1,0 +1,17 @@
+{
+	"type": "modifier_list",
+	"version": 2,
+	"id": "9190f84a-c4d7-450b-bc16-0a9d8adb6fe5",
+	"rows": [
+		{
+			"type": "modifier",
+			"id": "cf6a73a9-85f9-4fa5-9331-b0ac97b55637",
+			"name": "Mana Surge (msur)",
+			"reference": "B105",
+			"cost_type": "percentage",
+			"cost": 20,
+			"affects": "total",
+			"notes": "Like surge but affects only Mana powered"
+		}
+	]
+}

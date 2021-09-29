@@ -9,10 +9,80 @@
 			"container_type": "race",
 			"name": "Tabaxi",
 			"calc": {
-				"points": 40
+				"points": 50
 			},
 			"open": true,
 			"children": [
+				{
+					"type": "advantage",
+					"id": "1ae2ca81-8cee-4fd0-b3cb-affdd25e3304",
+					"name": "Colorblindness",
+					"physical": true,
+					"base_points": -10,
+					"reference": "B127",
+					"calc": {
+						"points": -10
+					},
+					"features": [
+						{
+							"type": "skill_bonus",
+							"amount": -1,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "contains",
+								"qualifier": "artist"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -1,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "contains",
+								"qualifier": "chemistry"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -1,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "contains",
+								"qualifier": "driving"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -1,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "merchant"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -1,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "contains",
+								"qualifier": "piloting"
+							}
+						},
+						{
+							"type": "skill_bonus",
+							"amount": -1,
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "contains",
+								"qualifier": "tracking"
+							}
+						}
+					],
+					"categories": [
+						"Disadvantage"
+					]
+				},
 				{
 					"type": "advantage",
 					"id": "cb6f9ad5-7469-4ec4-bfed-c530b098cb6b",
@@ -45,105 +115,6 @@
 					"reference": "B41",
 					"calc": {
 						"points": 10
-					},
-					"categories": [
-						"Advantage"
-					]
-				},
-				{
-					"type": "advantage",
-					"id": "09ff0a60-f7a4-4281-9b1c-27c8d0af7fc7",
-					"name": "Claws, Sharp (Feet)",
-					"physical": true,
-					"base_points": 5,
-					"weapons": [
-						{
-							"type": "melee_weapon",
-							"damage": {
-								"type": "cut",
-								"st": "thr"
-							},
-							"usage": "Kick",
-							"reach": "C,1",
-							"parry": "No",
-							"block": "No",
-							"calc": {
-								"level": 0,
-								"parry": "No",
-								"block": "No",
-								"damage": "thr cut"
-							},
-							"defaults": [
-								{
-									"type": "dx",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Brawling",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Karate",
-									"modifier": -2
-								}
-							]
-						}
-					],
-					"reference": "B42",
-					"calc": {
-						"points": 5
-					},
-					"categories": [
-						"Advantage"
-					]
-				},
-				{
-					"type": "advantage",
-					"id": "0482e73c-76ab-474c-951d-d6d7a7780e44",
-					"name": "Claws, Sharp (Hands)",
-					"physical": true,
-					"weapons": [
-						{
-							"type": "melee_weapon",
-							"damage": {
-								"type": "cut",
-								"st": "thr",
-								"base": "-1"
-							},
-							"usage": "Slash",
-							"reach": "C",
-							"parry": "0",
-							"block": "No",
-							"calc": {
-								"level": 0,
-								"parry": "0",
-								"block": "No",
-								"damage": "thr-1 cut"
-							},
-							"defaults": [
-								{
-									"type": "dx"
-								},
-								{
-									"type": "skill",
-									"name": "Brawling"
-								},
-								{
-									"type": "skill",
-									"name": "Boxing"
-								},
-								{
-									"type": "skill",
-									"name": "Karate"
-								}
-							]
-						}
-					],
-					"reference": "B42",
-					"calc": {
-						"points": 0
 					},
 					"categories": [
 						"Advantage"
@@ -334,14 +305,35 @@
 				},
 				{
 					"type": "advantage",
-					"id": "88f6c6b0-54e7-4f4e-8f65-b074bd6f36e4",
-					"name": "Night Vision",
+					"id": "3c9bff95-a03c-4490-8f36-d1c58f51c005",
+					"name": "Dark Vision",
 					"physical": true,
-					"levels": "5",
-					"points_per_level": 1,
-					"reference": "B71",
+					"exotic": true,
+					"base_points": 25,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "eb4bc658-c51d-478c-89b2-3076da29918e",
+							"disabled": true,
+							"name": "Can see colors in the dark",
+							"cost_type": "percentage",
+							"cost": 20,
+							"affects": "total"
+						},
+						{
+							"type": "modifier",
+							"id": "4303ef8b-cc31-4ea5-ae6e-a936d83e36a1",
+							"disabled": true,
+							"name": "Hypersensory",
+							"reference": "P46",
+							"cost_type": "percentage",
+							"cost": 40,
+							"affects": "total"
+						}
+					],
+					"reference": "B47",
 					"calc": {
-						"points": 5
+						"points": 25
 					},
 					"categories": [
 						"Advantage"
@@ -360,6 +352,90 @@
 					"categories": [
 						"Disadvantage",
 						"Phobia"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "39749920-3aed-4113-9b3c-865fe7fafec4",
+					"name": "Sharp Claws",
+					"physical": true,
+					"base_points": 5,
+					"weapons": [
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "cut",
+								"st": "thr",
+								"base": "-1"
+							},
+							"usage": "Slash",
+							"reach": "C",
+							"parry": "0",
+							"block": "No",
+							"calc": {
+								"level": 0,
+								"parry": "0",
+								"block": "No",
+								"damage": "thr-1 cut"
+							},
+							"defaults": [
+								{
+									"type": "dx"
+								},
+								{
+									"type": "skill",
+									"name": "Brawling"
+								},
+								{
+									"type": "skill",
+									"name": "Boxing"
+								},
+								{
+									"type": "skill",
+									"name": "Karate"
+								}
+							]
+						},
+						{
+							"type": "melee_weapon",
+							"damage": {
+								"type": "cut",
+								"st": "thr"
+							},
+							"usage": "Kick",
+							"reach": "C,1",
+							"parry": "No",
+							"block": "No",
+							"calc": {
+								"level": 0,
+								"parry": "No",
+								"block": "No",
+								"damage": "thr cut"
+							},
+							"defaults": [
+								{
+									"type": "dx",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Karate",
+									"modifier": -2
+								},
+								{
+									"type": "skill",
+									"name": "Brawling",
+									"modifier": -2
+								}
+							]
+						}
+					],
+					"reference": "B42",
+					"calc": {
+						"points": 5
+					},
+					"categories": [
+						"Advantage"
 					]
 				},
 				{

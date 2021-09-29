@@ -8,10 +8,606 @@
 			"id": "33c1a4d9-256d-45b0-9dcb-8356697cc07d",
 			"name": "Gallus",
 			"calc": {
-				"points": 15
+				"points": 13
 			},
 			"open": true,
 			"children": [
+				{
+					"type": "advantage_container",
+					"id": "21189fdf-8a1d-465f-8384-b7ea7bec0673",
+					"container_type": "meta_trait",
+					"name": "Avian",
+					"calc": {
+						"points": -31
+					},
+					"open": true,
+					"children": [
+						{
+							"type": "advantage",
+							"id": "f062ddf1-6f34-414d-a56e-33d068202f44",
+							"name": "Beak",
+							"physical": true,
+							"weapons": [
+								{
+									"type": "melee_weapon",
+									"damage": {
+										"type": "pi",
+										"st": "thr",
+										"base": "-1"
+									},
+									"usage": "Peck",
+									"reach": "C",
+									"parry": "No",
+									"block": "No",
+									"calc": {
+										"level": 0,
+										"parry": "No",
+										"block": "No",
+										"damage": "thr-1 pi"
+									},
+									"defaults": [
+										{
+											"type": "dx"
+										},
+										{
+											"type": "skill",
+											"name": "Brawling"
+										}
+									]
+								}
+							],
+							"reference": "B271",
+							"calc": {
+								"points": 0
+							},
+							"notes": "Natural Attack (bite) but piercing"
+						},
+						{
+							"type": "advantage",
+							"id": "60785598-c67e-4bff-ad00-03316ffc3132",
+							"name": "Decreased Strength",
+							"physical": true,
+							"levels": "1",
+							"points_per_level": -10,
+							"reference": "B14",
+							"calc": {
+								"points": -10
+							},
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": -1,
+									"per_level": true,
+									"attribute": "st"
+								}
+							],
+							"categories": [
+								"Attribute",
+								"Disadvantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "036d2b7e-92c1-4642-a630-88d3ab4a3ec0",
+							"name": "Feathering",
+							"physical": true,
+							"exotic": true,
+							"base_points": 1,
+							"reference": "B101",
+							"calc": {
+								"points": 1
+							},
+							"notes": "Same as fur, but for birds",
+							"categories": [
+								"Perk"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "1e19e26b-a104-4188-8047-8437601c0446",
+							"name": "Feature: Head armor not interchangeable with humans.",
+							"physical": true,
+							"reference": "DF3:15",
+							"calc": {
+								"points": 0
+							}
+						},
+						{
+							"type": "advantage",
+							"id": "1b6bc710-ebdb-4e4d-98db-4be874c3a699",
+							"name": "Feature: Torso armor not interchangeable with humans.",
+							"physical": true,
+							"calc": {
+								"points": 0
+							}
+						},
+						{
+							"type": "advantage",
+							"id": "7bc33cde-b2c0-47b8-a096-bcfba69f52ca",
+							"name": "Increased Dexterity",
+							"physical": true,
+							"levels": "1",
+							"points_per_level": 20,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "7d5bc863-48fa-418b-9c45-39d4bd6c4627",
+									"disabled": true,
+									"name": "No Fine Manipulators",
+									"cost_type": "percentage",
+									"cost": -40,
+									"affects": "total"
+								}
+							],
+							"reference": "B15",
+							"calc": {
+								"points": 20
+							},
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"amount": 1,
+									"per_level": true,
+									"attribute": "dx"
+								}
+							],
+							"categories": [
+								"Advantage",
+								"Attribute"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "80205da1-a05f-477b-ae24-ae760e895a6f",
+							"name": "Language: ",
+							"mental": true,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "3ae8a982-0891-4213-8e1a-af7d818a1182",
+									"disabled": true,
+									"name": "Native",
+									"reference": "B23",
+									"cost_type": "points",
+									"cost": -6,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "a45cb79a-19f3-4447-86ae-d84b68fd7bd0",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total",
+									"notes": "None"
+								},
+								{
+									"type": "modifier",
+									"id": "2174e912-e5c8-4924-bf47-b5350adf6d85",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Broken"
+								},
+								{
+									"type": "modifier",
+									"id": "afff7cc7-ecdd-4b78-9de8-2b2d9cc5a0bd",
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "efb9f54b-94a4-4b2c-8a7c-7ba80c2be809",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 3,
+									"affects": "total",
+									"notes": "Native"
+								},
+								{
+									"type": "modifier",
+									"id": "b04e46a2-00c4-4abe-b16c-d4b895910da3",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total",
+									"notes": "None"
+								},
+								{
+									"type": "modifier",
+									"id": "4a8b0225-9851-4dca-bc30-983f9cda14aa",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Broken"
+								},
+								{
+									"type": "modifier",
+									"id": "7256645e-2767-4fdf-8693-c970ff71368d",
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "bc69519e-fc0f-4221-8c3e-2c87c1bab5fa",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 3,
+									"affects": "total",
+									"notes": "Native"
+								}
+							],
+							"reference": "B24",
+							"calc": {
+								"points": 4
+							},
+							"categories": [
+								"Advantage",
+								"Language"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "15c28a6a-1b8f-48ea-ad83-3da5d0dbd068",
+							"name": "Language: Birdfolk",
+							"mental": true,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "d2d26cd9-92f7-4396-84df-6975c1f616f5",
+									"name": "Native",
+									"reference": "B23",
+									"cost_type": "points",
+									"cost": -6,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "12922a21-4707-4395-b999-74a873dc77b1",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total",
+									"notes": "None"
+								},
+								{
+									"type": "modifier",
+									"id": "13e7acf7-2d8f-409c-b1ac-5c53b9c87ac9",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Broken"
+								},
+								{
+									"type": "modifier",
+									"id": "26579173-2f34-4434-b186-3b41bd68b02a",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "bfb1bb9d-d6d2-49e4-9fe1-9ce48ba409d1",
+									"disabled": true,
+									"name": "Spoken",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 3,
+									"affects": "total",
+									"notes": "Native"
+								},
+								{
+									"type": "modifier",
+									"id": "9eb23a08-139a-4a65-af76-e5d0943cfb9a",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 0,
+									"affects": "total",
+									"notes": "None"
+								},
+								{
+									"type": "modifier",
+									"id": "8ee402f7-06ef-4374-8eed-7d3b94c268d7",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 1,
+									"affects": "total",
+									"notes": "Broken"
+								},
+								{
+									"type": "modifier",
+									"id": "6c5701cb-a3b7-4afb-9aae-9b99081a71be",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 2,
+									"affects": "total",
+									"notes": "Accented"
+								},
+								{
+									"type": "modifier",
+									"id": "eeafb906-0d25-4b43-85ff-723501644e44",
+									"disabled": true,
+									"name": "Written",
+									"reference": "B24",
+									"cost_type": "points",
+									"cost": 3,
+									"affects": "total",
+									"notes": "Native"
+								}
+							],
+							"reference": "B24",
+							"calc": {
+								"points": -6
+							},
+							"categories": [
+								"Advantage",
+								"Language"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "17216636-8e04-4524-9685-f26d5fb7bc21",
+							"name": "Sharp Claws",
+							"physical": true,
+							"base_points": 5,
+							"weapons": [
+								{
+									"type": "melee_weapon",
+									"damage": {
+										"type": "cut",
+										"st": "thr",
+										"base": "-1"
+									},
+									"usage": "Slash",
+									"reach": "C",
+									"parry": "0",
+									"block": "No",
+									"calc": {
+										"level": 0,
+										"parry": "0",
+										"block": "No",
+										"damage": "thr-1 cut"
+									},
+									"defaults": [
+										{
+											"type": "dx"
+										},
+										{
+											"type": "skill",
+											"name": "Brawling"
+										},
+										{
+											"type": "skill",
+											"name": "Boxing"
+										},
+										{
+											"type": "skill",
+											"name": "Karate"
+										}
+									]
+								},
+								{
+									"type": "melee_weapon",
+									"damage": {
+										"type": "cut",
+										"st": "thr"
+									},
+									"usage": "Kick",
+									"reach": "C,1",
+									"parry": "No",
+									"block": "No",
+									"calc": {
+										"level": 0,
+										"parry": "No",
+										"block": "No",
+										"damage": "thr cut"
+									},
+									"defaults": [
+										{
+											"type": "dx",
+											"modifier": -2
+										},
+										{
+											"type": "skill",
+											"name": "Karate",
+											"modifier": -2
+										},
+										{
+											"type": "skill",
+											"name": "Brawling",
+											"modifier": -2
+										}
+									]
+								}
+							],
+							"reference": "B42",
+							"calc": {
+								"points": 5
+							},
+							"categories": [
+								"Advantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "c5651071-b980-4599-89d5-2a89ab342a78",
+							"name": "Skinny",
+							"physical": true,
+							"base_points": -5,
+							"reference": "B18",
+							"calc": {
+								"points": -5
+							},
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "attribute_prereq",
+										"has": true,
+										"which": "ht",
+										"qualifier": {
+											"compare": "at_most",
+											"qualifier": 14
+										}
+									}
+								]
+							},
+							"features": [
+								{
+									"type": "skill_bonus",
+									"amount": -2,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "disguise"
+									}
+								},
+								{
+									"type": "skill_bonus",
+									"amount": -2,
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "shadowing"
+									}
+								}
+							],
+							"notes": "-2 ST vs. knockback",
+							"categories": [
+								"Disadvantage"
+							]
+						},
+						{
+							"type": "advantage",
+							"id": "4cbd8354-6f1f-43e0-8c2c-d2e44c1fc897",
+							"name": "Vulnerability",
+							"physical": true,
+							"exotic": true,
+							"modifiers": [
+								{
+									"type": "modifier",
+									"id": "c26e1c61-758a-4b43-9d8c-95be3928f922",
+									"disabled": true,
+									"name": "@Rare attack@",
+									"reference": "B161",
+									"cost_type": "points",
+									"cost": -5,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "caecf27f-240c-4d7c-a578-7ad484f59cc9",
+									"disabled": true,
+									"name": "@Occasional attack@",
+									"reference": "B161",
+									"cost_type": "points",
+									"cost": -10,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "d8823070-2102-4554-9897-aac92a924c31",
+									"disabled": true,
+									"name": "@Common attack@",
+									"reference": "B161",
+									"cost_type": "points",
+									"cost": -15,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "d48d7376-1f36-48d1-95e6-0ac1746ffaf9",
+									"name": "Crushing",
+									"reference": "B161",
+									"cost_type": "points",
+									"cost": -20,
+									"affects": "total"
+								},
+								{
+									"type": "modifier",
+									"id": "9362dff3-d208-47a5-88af-a3fad2d291d4",
+									"name": "Wounding x2",
+									"reference": "B161",
+									"cost_type": "multiplier",
+									"cost": 2
+								},
+								{
+									"type": "modifier",
+									"id": "6ac53e5a-b49e-417d-9ab0-4b862b8bd7f7",
+									"disabled": true,
+									"name": "Wounding x3",
+									"reference": "B161",
+									"cost_type": "multiplier",
+									"cost": 3
+								},
+								{
+									"type": "modifier",
+									"id": "1d5d8aea-5231-4155-95a5-d28d5b1149ec",
+									"disabled": true,
+									"name": "Wounding x4",
+									"reference": "B161",
+									"cost_type": "multiplier",
+									"cost": 4
+								},
+								{
+									"type": "modifier",
+									"id": "1f4dab77-8670-45a1-93ae-2d81b976b97f",
+									"disabled": true,
+									"name": "Fatigue Only",
+									"reference": "B161",
+									"cost_type": "percentage",
+									"cost": -50,
+									"affects": "total"
+								}
+							],
+							"reference": "B161",
+							"calc": {
+								"points": -40
+							},
+							"categories": [
+								"Disadvantage"
+							]
+						}
+					]
+				},
 				{
 					"type": "advantage",
 					"id": "a2d9eb5c-e3f5-42eb-86a5-51b22e7beaea",
@@ -193,6 +789,56 @@
 				},
 				{
 					"type": "advantage",
+					"id": "b7250429-4ce7-4b69-8aa0-fa95f0627919",
+					"name": "Increased Dexterity",
+					"physical": true,
+					"levels": "1",
+					"points_per_level": 20,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "ea75d420-1317-4381-a88d-b9093e4261ca",
+							"disabled": true,
+							"name": "No Fine Manipulators",
+							"cost_type": "percentage",
+							"cost": -40,
+							"affects": "total"
+						}
+					],
+					"reference": "B15",
+					"calc": {
+						"points": 20
+					},
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"amount": 1,
+							"per_level": true,
+							"attribute": "dx"
+						}
+					],
+					"categories": [
+						"Advantage",
+						"Attribute"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "d76d1a09-af6b-41be-be7f-b174e58ae815",
+					"name": "Penetrating Voice",
+					"physical": true,
+					"base_points": 1,
+					"reference": "B101",
+					"calc": {
+						"points": 1
+					},
+					"notes": "In situations where you want to be heard over noise, others get +3 to their Hearing roll",
+					"categories": [
+						"Perk"
+					]
+				},
+				{
+					"type": "advantage",
 					"id": "485a6c5a-3661-4377-a63b-0336f12c40fd",
 					"name": "Talent (Musical Ability)",
 					"mental": true,
@@ -353,408 +999,6 @@
 					],
 					"categories": [
 						"Advantage"
-					]
-				},
-				{
-					"type": "advantage",
-					"id": "d76d1a09-af6b-41be-be7f-b174e58ae815",
-					"name": "Penetrating Voice",
-					"physical": true,
-					"base_points": 1,
-					"reference": "B101",
-					"calc": {
-						"points": 1
-					},
-					"notes": "In situations where you want to be heard over noise, others get +3 to their Hearing roll",
-					"categories": [
-						"Perk"
-					]
-				},
-				{
-					"type": "advantage",
-					"id": "b7250429-4ce7-4b69-8aa0-fa95f0627919",
-					"name": "Increased Dexterity",
-					"physical": true,
-					"levels": "1",
-					"points_per_level": 20,
-					"modifiers": [
-						{
-							"type": "modifier",
-							"id": "ea75d420-1317-4381-a88d-b9093e4261ca",
-							"disabled": true,
-							"name": "No Fine Manipulators",
-							"cost_type": "percentage",
-							"cost": -40,
-							"affects": "total"
-						}
-					],
-					"reference": "B15",
-					"calc": {
-						"points": 20
-					},
-					"features": [
-						{
-							"type": "attribute_bonus",
-							"amount": 1,
-							"per_level": true,
-							"attribute": "dx"
-						}
-					],
-					"categories": [
-						"Advantage",
-						"Attribute"
-					]
-				},
-				{
-					"type": "advantage_container",
-					"id": "1c0719b5-d62c-4797-b172-c9b0f8707fa0",
-					"name": "Avian",
-					"calc": {
-						"points": -29
-					},
-					"open": true,
-					"children": [
-						{
-							"type": "advantage",
-							"id": "4bf69c46-a6b2-47d9-8c79-3fc163029c52",
-							"name": "Vulnerability",
-							"physical": true,
-							"exotic": true,
-							"modifiers": [
-								{
-									"type": "modifier",
-									"id": "297ee6da-7b1a-453d-8ba1-d53669fca5cf",
-									"disabled": true,
-									"name": "@Rare attack@",
-									"reference": "B161",
-									"cost_type": "points",
-									"cost": -5,
-									"affects": "total"
-								},
-								{
-									"type": "modifier",
-									"id": "c048d164-c51c-4a07-b55f-4774ec2b7962",
-									"disabled": true,
-									"name": "@Occasional attack@",
-									"reference": "B161",
-									"cost_type": "points",
-									"cost": -10,
-									"affects": "total"
-								},
-								{
-									"type": "modifier",
-									"id": "810012b2-f66d-49ce-88f4-31f9caf79a75",
-									"disabled": true,
-									"name": "@Common attack@",
-									"reference": "B161",
-									"cost_type": "points",
-									"cost": -15,
-									"affects": "total"
-								},
-								{
-									"type": "modifier",
-									"id": "21ece767-a34e-4185-9cfe-31d884c70e14",
-									"name": "Crushing",
-									"reference": "B161",
-									"cost_type": "points",
-									"cost": -20,
-									"affects": "total"
-								},
-								{
-									"type": "modifier",
-									"id": "a50ab5ac-248a-487a-8936-8065bc7cca96",
-									"name": "Wounding x2",
-									"reference": "B161",
-									"cost_type": "multiplier",
-									"cost": 2
-								},
-								{
-									"type": "modifier",
-									"id": "41bfda4f-50c1-4c1a-8b66-9bf6fdeedbf8",
-									"disabled": true,
-									"name": "Wounding x3",
-									"reference": "B161",
-									"cost_type": "multiplier",
-									"cost": 3
-								},
-								{
-									"type": "modifier",
-									"id": "0b422df9-3431-4a82-b5ee-4a2730515ca9",
-									"disabled": true,
-									"name": "Wounding x4",
-									"reference": "B161",
-									"cost_type": "multiplier",
-									"cost": 4
-								},
-								{
-									"type": "modifier",
-									"id": "ecc98dde-470b-4b14-ac2e-d0a38f39fdfc",
-									"disabled": true,
-									"name": "Fatigue Only",
-									"reference": "B161",
-									"cost_type": "percentage",
-									"cost": -50,
-									"affects": "total"
-								}
-							],
-							"reference": "B161",
-							"calc": {
-								"points": -40
-							},
-							"categories": [
-								"Disadvantage"
-							]
-						},
-						{
-							"type": "advantage",
-							"id": "45f4a2e2-881b-4e8d-b6d9-5f31e85d8e6e",
-							"name": "Skinny",
-							"physical": true,
-							"base_points": -5,
-							"reference": "B18",
-							"calc": {
-								"points": -5
-							},
-							"prereqs": {
-								"type": "prereq_list",
-								"all": true,
-								"prereqs": [
-									{
-										"type": "attribute_prereq",
-										"has": true,
-										"which": "ht",
-										"qualifier": {
-											"compare": "at_most",
-											"qualifier": 14
-										}
-									}
-								]
-							},
-							"features": [
-								{
-									"type": "skill_bonus",
-									"amount": -2,
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "disguise"
-									}
-								},
-								{
-									"type": "skill_bonus",
-									"amount": -2,
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "shadowing"
-									}
-								}
-							],
-							"notes": "-2 ST vs. knockback",
-							"categories": [
-								"Disadvantage"
-							]
-						},
-						{
-							"type": "advantage",
-							"id": "f0efa575-f64c-474e-a291-3d9764df0792",
-							"name": "Decreased Strength",
-							"physical": true,
-							"levels": "1",
-							"points_per_level": -10,
-							"reference": "B14",
-							"calc": {
-								"points": -10
-							},
-							"features": [
-								{
-									"type": "attribute_bonus",
-									"amount": -1,
-									"per_level": true,
-									"attribute": "st"
-								}
-							],
-							"categories": [
-								"Attribute",
-								"Disadvantage"
-							]
-						},
-						{
-							"type": "advantage",
-							"id": "796686ae-2731-4262-802d-8cf80f504c46",
-							"name": "Increased Dexterity",
-							"physical": true,
-							"levels": "1",
-							"points_per_level": 20,
-							"modifiers": [
-								{
-									"type": "modifier",
-									"id": "a9a6861a-e172-4478-8e2c-f90177e420c3",
-									"disabled": true,
-									"name": "No Fine Manipulators",
-									"cost_type": "percentage",
-									"cost": -40,
-									"affects": "total"
-								}
-							],
-							"reference": "B15",
-							"calc": {
-								"points": 20
-							},
-							"features": [
-								{
-									"type": "attribute_bonus",
-									"amount": 1,
-									"per_level": true,
-									"attribute": "dx"
-								}
-							],
-							"categories": [
-								"Advantage",
-								"Attribute"
-							]
-						},
-						{
-							"type": "advantage",
-							"id": "4b71af3c-8466-4b4a-882f-986b0542e7b3",
-							"name": "Sharp Claws",
-							"physical": true,
-							"base_points": 5,
-							"weapons": [
-								{
-									"type": "melee_weapon",
-									"damage": {
-										"type": "cut",
-										"st": "thr",
-										"base": "-1"
-									},
-									"usage": "Slash",
-									"reach": "C",
-									"parry": "0",
-									"block": "No",
-									"calc": {
-										"level": 0,
-										"parry": "0",
-										"block": "No",
-										"damage": "thr-1 cut"
-									},
-									"defaults": [
-										{
-											"type": "dx"
-										},
-										{
-											"type": "skill",
-											"name": "Brawling"
-										},
-										{
-											"type": "skill",
-											"name": "Boxing"
-										},
-										{
-											"type": "skill",
-											"name": "Karate"
-										}
-									]
-								},
-								{
-									"type": "melee_weapon",
-									"damage": {
-										"type": "cut",
-										"st": "thr"
-									},
-									"usage": "Kick",
-									"reach": "C,1",
-									"parry": "No",
-									"block": "No",
-									"calc": {
-										"level": 0,
-										"parry": "No",
-										"block": "No",
-										"damage": "thr cut"
-									},
-									"defaults": [
-										{
-											"type": "dx",
-											"modifier": -2
-										},
-										{
-											"type": "skill",
-											"name": "Karate",
-											"modifier": -2
-										},
-										{
-											"type": "skill",
-											"name": "Brawling",
-											"modifier": -2
-										}
-									]
-								}
-							],
-							"reference": "B42",
-							"calc": {
-								"points": 5
-							},
-							"categories": [
-								"Advantage"
-							]
-						},
-						{
-							"type": "advantage",
-							"id": "4fe76009-0341-4be2-b3a2-b1370ea3cb1f",
-							"name": "Sharp Teeth",
-							"physical": true,
-							"exotic": true,
-							"base_points": 1,
-							"weapons": [
-								{
-									"type": "melee_weapon",
-									"damage": {
-										"type": "cut",
-										"st": "thr",
-										"base": "-1"
-									},
-									"usage": "Bite",
-									"reach": "C",
-									"parry": "No",
-									"block": "No",
-									"calc": {
-										"level": 0,
-										"parry": "No",
-										"block": "No",
-										"damage": "thr-1 cut"
-									},
-									"defaults": [
-										{
-											"type": "skill",
-											"name": "Brawling"
-										},
-										{
-											"type": "dx"
-										}
-									]
-								}
-							],
-							"modifiers": [
-								{
-									"type": "modifier",
-									"id": "ccea088f-2806-4f76-8a68-8472def99bdc",
-									"disabled": true,
-									"name": "Provided by Vampiric Bite",
-									"reference": "B96",
-									"cost_type": "points",
-									"cost": -1,
-									"affects": "total"
-								}
-							],
-							"reference": "B91",
-							"calc": {
-								"points": 1
-							},
-							"notes": "Beak",
-							"categories": [
-								"Perk"
-							]
-						}
 					]
 				}
 			]

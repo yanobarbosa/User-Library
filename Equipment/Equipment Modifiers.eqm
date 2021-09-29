@@ -27,6 +27,23 @@
 					"reference": "DFA106",
 					"cost_type": "to_base_cost",
 					"cost": "+16 CF"
+				},
+				{
+					"type": "eqp_modifier_container",
+					"id": "813b2cbc-7633-402a-97f5-69d80ac59612",
+					"disabled": true,
+					"name": "Armor",
+					"open": true
+				},
+				{
+					"type": "eqp_modifier",
+					"id": "747dbefc-1259-4382-a9be-7496966e3a24",
+					"name": "Necromium",
+					"cost_type": "to_original_cost",
+					"cost": "+9",
+					"weight_type": "to_final_weight",
+					"weight": "x1/10",
+					"notes": "Reduces weight to 1/10 of original"
 				}
 			]
 		}

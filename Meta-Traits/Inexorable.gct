@@ -1,0 +1,87 @@
+{
+	"type": "template",
+	"version": 2,
+	"id": "50b6d30f-bc79-46be-a4c3-07cdf46edfc8",
+	"advantages": [
+		{
+			"type": "advantage_container",
+			"id": "b057c000-476b-4826-bcb4-fab1120af5ea",
+			"container_type": "meta_trait",
+			"name": "Inexorable",
+			"reference": "Z69",
+			"calc": {
+				"points": 65
+			},
+			"open": true,
+			"children": [
+				{
+					"type": "advantage",
+					"id": "03f39403-64db-4e6a-962d-aff08a482f2b",
+					"name": "Immunity to Mind Control",
+					"physical": true,
+					"base_points": 30,
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"type": "advantage",
+					"id": "cc98e89a-b973-420a-b460-f3f5f873713c",
+					"name": "Indomitable",
+					"mental": true,
+					"base_points": 15,
+					"reference": "B60",
+					"calc": {
+						"points": 15
+					},
+					"notes": "Impossible to influence through ordinary words or actions",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "1e6450cb-aa11-4892-acb9-562c2f4fd4c3",
+					"name": "Single-Minded",
+					"mental": true,
+					"base_points": 5,
+					"reference": "B85",
+					"calc": {
+						"points": 5
+					},
+					"notes": "+3 to rolls for any lengthy mental task you concentrate on to the exclusion of other activities, if the GM feels such focus would be beneficial. You tend to ignore everything else while obsessed and have -5 to all rolls to notice interruptions.",
+					"categories": [
+						"Advantage"
+					]
+				},
+				{
+					"type": "advantage",
+					"id": "dac5da51-19f1-4d5c-bd5a-384414f54452",
+					"name": "Unfazeable",
+					"mental": true,
+					"base_points": 15,
+					"modifiers": [
+						{
+							"type": "modifier",
+							"id": "4ed9747b-56f4-43a3-b045-18bfdffa8b09",
+							"disabled": true,
+							"name": "Familiar Horrors",
+							"reference": "H20",
+							"cost_type": "percentage",
+							"cost": -50,
+							"affects": "total"
+						}
+					],
+					"reference": "B95",
+					"calc": {
+						"points": 15
+					},
+					"notes": "Exempt from fright checks. Reaction modifiers do not affect you.",
+					"categories": [
+						"Advantage"
+					]
+				}
+			]
+		}
+	]
+}
